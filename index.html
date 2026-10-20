@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>New Bright | Flavor in every strand</title>
+<meta name="description" content="An independent homepage concept for New Bright: Chinese Noodles · Pancit Canton, made in Saudi Arabia.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#411415">
+<link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/cairo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/packs/plain.webp" as="image">
+<script>document.documentElement.classList.add('js');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nb-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
+<link rel="stylesheet" href="styles.css?v=16">
+</head>
+<body data-hdr="light">
+
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<!-- ───────── Header: a tag hanging from the top edge ───────── -->
+<header class="hdr" id="hdr">
+  <a class="tab" href="#top" aria-label="New Bright">
+    <img src="assets/brand/logo.svg" alt="New Bright" width="591" height="105">
+  </a>
+  <p class="hdr-index" aria-hidden="true"><b id="hdrNum">01</b><span id="hdrLabel" data-i18n="ch.hero">The flavors</span></p>
+  <div class="hdr-actions">
+    <button class="pill pill-ghost" id="langBtn" type="button" aria-label="Switch language"><span id="langTxt">العربية</span></button>
+    <a class="pill pill-solid hide-s" href="#close" data-i18n="cta.quote">Request a quote</a>
+    <button class="pill pill-menu" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">
+      <span data-i18n="menu">Menu</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h11M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ───────── Social dock: fixed on every screen ───────── -->
+<nav class="sdock" id="sdock" data-i18n-aria="soc.label" aria-label="New Bright on social media">
+    <ul class="sd-list" id="sdList">
+      <li style="--o:0"><a class="sd-link" href="https://www.instagram.com/NewBrightKSA" target="_blank" rel="noopener noreferrer" data-n="instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg><span class="sd-name">Instagram<span class="sr" data-i18n="soc.tab"> (opens in a new tab)</span></span></a></li>
+      <li style="--o:1"><a class="sd-link" href="https://www.tiktok.com/@newbrightksa" target="_blank" rel="noopener noreferrer" data-n="tiktok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg><span class="sd-name">TikTok<span class="sr" data-i18n="soc.tab"> (opens in a new tab)</span></span></a></li>
+      <li style="--o:2"><a class="sd-link" href="https://www.snapchat.com/add/NewBrightKSA" target="_blank" rel="noopener noreferrer" data-n="snapchat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"/></svg><span class="sd-name">Snapchat<span class="sr" data-i18n="soc.tab"> (opens in a new tab)</span></span></a></li>
+      <li style="--o:3"><a class="sd-link" href="https://x.com/NewBrightKSA" target="_blank" rel="noopener noreferrer" data-n="x"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg><span class="sd-name">X<span class="sr" data-i18n="soc.tab"> (opens in a new tab)</span></span></a></li>
+      <li style="--o:4"><a class="sd-link" href="https://www.facebook.com/NewBrightKSA" target="_blank" rel="noopener noreferrer" data-n="facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg><span class="sd-name">Facebook<span class="sr" data-i18n="soc.tab"> (opens in a new tab)</span></span></a></li>
+      <li style="--o:5"><a class="sd-link" href="https://www.linkedin.com/company/newbrightksa" target="_blank" rel="noopener noreferrer" data-n="linkedin"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg><span class="sd-name">LinkedIn<span class="sr" data-i18n="soc.tab"> (opens in a new tab)</span></span></a></li>
+      <li style="--o:6"><a class="sd-link" href="https://wa.me/966557287799" target="_blank" rel="noopener noreferrer" data-n="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span class="sd-name">WhatsApp<span class="sr" data-i18n="soc.tab"> (opens in a new tab)</span></span></a></li>
+    </ul>
+    <button class="sd-toggle" id="sdToggle" type="button" aria-expanded="false" aria-controls="sdList"><svg viewBox="0 0 24 24" class="sd-ico-open" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><svg viewBox="0 0 24 24" class="sd-ico-close" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg><span class="sr" id="sdLabel" data-i18n="soc.open">Show social media accounts</span></button>
+  </nav>
+
+<!-- ───────── Menu ───────── -->
+<dialog class="menu" id="menu" aria-label="Menu">
+  <div class="menu-in">
+    <button class="menu-x" id="menuX" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+    <ol class="menu-list">
+      <li><a href="#top"><i>01</i><span data-i18n="ch.hero">The flavors</span></a></li>
+      <li><a href="#intro"><i>02</i><span data-i18n="ch.intro">The company</span></a></li>
+      <li><a href="#idea"><i>03</i><span data-i18n="ch.idea">The idea</span></a></li>
+      <li><a href="#made"><i>04</i><span data-i18n="ch.made">Made in Saudi</span></a></li>
+      <li><a href="#label"><i>05</i><span data-i18n="ch.label">White label</span></a></li>
+      <li><a href="#partners"><i>06</i><span data-i18n="ch.partners">Partners</span></a></li>
+      <li><a href="#close"><i>07</i><span data-i18n="cta.quote">Request a quote</span></a></li>
+    </ol>
+    <div class="menu-foot">
+      <p data-i18n="menu.tag">Chinese Noodles · Pancit Canton</p>
+      <p data-i18n="made.by">Al Rammah Factory, Al Khobar</p>
+    </div>
+  </div>
+</dialog>
+
+<!-- ───────── Chapter rail ───────── -->
+<nav class="rail" id="rail" aria-label="Chapters">
+  <span class="rail-line"><i id="railFill"></i></span>
+  <ol>
+    <li><a href="#top" data-ch="0" aria-label="01"><b>01</b></a></li>
+    <li><a href="#intro" data-ch="1" aria-label="02"><b>02</b></a></li>
+    <li><a href="#collection" data-ch="2" aria-label="03"><b>03</b></a></li>
+    <li><a href="#idea" data-ch="3" aria-label="04"><b>04</b></a></li>
+    <li><a href="#made" data-ch="4" aria-label="05"><b>05</b></a></li>
+    <li><a href="#label" data-ch="5" aria-label="06"><b>06</b></a></li>
+    <li><a href="#partners" data-ch="6" aria-label="07"><b>07</b></a></li>
+    <li><a href="#close" data-ch="7" aria-label="08"><b>08</b></a></li>
+  </ol>
+</nav>
+
+<main id="main">
+
+<!-- ═════════ 01 · HERO ═════════ -->
+<section class="hero" id="top" data-flavor="plain" data-ch="0" aria-labelledby="h1">
+  <div class="stage-bg" aria-hidden="true">
+    <div class="layer" data-f="plain"></div>
+    <div class="layer" data-f="vegetables"></div>
+    <div class="layer" data-f="chicken"></div>
+    <div class="layer" data-f="beef"></div>
+  </div>
+
+  <div class="giant" aria-hidden="true">
+    <span class="on" data-f="plain" data-i18n="f.plain.big">PLAIN</span>
+    <span data-f="vegetables" data-i18n="f.vegetables.big">VEGETABLES</span>
+    <span data-f="chicken" data-i18n="f.chicken.big">CHICKEN</span>
+    <span data-f="beef" data-i18n="f.beef.big">BEEF</span>
+  </div>
+
+  <div class="hero-copy">
+    <p class="eyebrow"><i class="dot"></i><span data-i18n="hero.eyebrow">Chinese Noodles · Pancit Canton</span></p>
+    <h1 id="h1">
+      <span class="ln"><span data-i18n="h1.a">Flavor,</span></span>
+      <span class="ln"><span data-i18n="h1.b">in every</span></span>
+      <span class="ln"><span><span data-i18n="h1.c" class="strand-word">strand.</span><svg class="squig" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 12c12-14 24-14 36 0s24 14 36 0 24-14 36 0 24 14 36 0 24-14 36 0 24 14 36 0 24-14 36 0 24 14 36 0"/></svg></span></span>
+    </h1>
+    <p class="lead" data-i18n="hero.lead">Flavor is built directly into the noodles themselves.</p>
+    <div class="cta-row">
+      <a class="btn btn-fill" href="#collection"><span data-i18n="hero.cta1">Flavor range</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-line" href="#partners"><span data-i18n="hero.cta2">Partnerships</span></a>
+    </div>
+  </div>
+
+  <div class="packs" id="packs">
+    <button class="pack" type="button" data-f="plain" data-slot="0" tabindex="-1"><span class="shadow"></span><img src="assets/packs/plain.webp" width="1820" height="1809" alt="" data-i18n-alt="f.plain.alt" fetchpriority="high"></button>
+    <button class="pack" type="button" data-f="vegetables" data-slot="1" tabindex="-1"><span class="shadow"></span><img src="assets/packs/vegetables.webp" width="1820" height="1809" alt="" data-i18n-alt="f.vegetables.alt"></button>
+    <button class="pack" type="button" data-f="chicken" data-slot="2" tabindex="-1"><span class="shadow"></span><img src="assets/packs/chicken.webp" width="1820" height="1809" alt="" data-i18n-alt="f.chicken.alt"></button>
+    <button class="pack" type="button" data-f="beef" data-slot="3" tabindex="-1"><span class="shadow"></span><img src="assets/packs/beef.webp" width="1820" height="1809" alt="" data-i18n-alt="f.beef.alt"></button>
+  </div>
+
+  <div class="hero-bar">
+    <div class="selector" role="radiogroup" id="selector" data-i18n-aria="hero.pick" aria-label="Choose a flavor">
+      <button type="button" role="radio" aria-checked="true" data-f="plain"><i style="--c:var(--yellow)"></i><span class="n">01</span><span class="nm" data-i18n="f.plain.name">Plain</span></button>
+      <button type="button" role="radio" aria-checked="false" data-f="vegetables"><i style="--c:var(--green)"></i><span class="n">02</span><span class="nm" data-i18n="f.vegetables.name">Vegetables</span></button>
+      <button type="button" role="radio" aria-checked="false" data-f="chicken"><i style="--c:var(--orange)"></i><span class="n">03</span><span class="nm" data-i18n="f.chicken.name">Chicken</span></button>
+      <button type="button" role="radio" aria-checked="false" data-f="beef"><i style="--c:var(--spice)"></i><span class="n">04</span><span class="nm" data-i18n="f.beef.name">Beef</span></button>
+    </div>
+    <p class="flavor-note" id="flavorNote" aria-live="polite"><span id="noteTxt" data-i18n="f.plain.note">Mild and versatile.</span></p>
+    <a class="scroll-cue" href="#intro" aria-label="Scroll"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+  </div>
+</section>
+
+<!-- ═════════ 02 · THE HOUSE BEHIND THE BRAND ═════════ -->
+<section class="house" id="intro" data-ch="1" data-hdr="light" aria-labelledby="houseTitle">
+  <span class="ink-strands" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+  <div class="house-head">
+    <div>
+      <p class="eyebrow dark" data-reveal><i class="dot"></i><span data-i18n="house.eyebrow">The house behind the brand</span></p>
+      <h2 id="houseTitle" data-reveal style="--i:1" data-i18n="house.title">New Bright is a brand of Al Rammah Factory.</h2>
+    </div>
+    <p class="house-sub" data-reveal style="--i:2" data-i18n="house.sub">Part of Al Rammah International Holding, a Saudi-owned group established in 1979 and headquartered in Al Khobar, Eastern Province.</p>
+  </div>
+
+  <ol class="lineage">
+    <li class="node n1" data-reveal style="--i:0">
+      <span class="yr">1979</span>
+      <h3 data-i18n="house.n1.t">Al Rammah International Holding</h3>
+      <p data-i18n="house.n1.p">A Saudi-owned group built on diversification, innovation, operational excellence and long-term value creation.</p>
+      <span class="tag" data-i18n="house.n1.tag">The group</span>
+    </li>
+    <li class="node n2" data-reveal style="--i:1">
+      <span class="yr">2021</span>
+      <h3 data-i18n="house.n2.t">Al Rammah Factory</h3>
+      <p data-i18n="house.n2.p">A local Saudi noodle manufacturer focused on quality, product development and trusted relationships with consumers and partners.</p>
+      <span class="tag" data-i18n="house.n2.tag">The factory</span>
+    </li>
+    <li class="node n3" data-reveal style="--i:2">
+      <img class="node-pack" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy">
+      <span class="yr" data-i18n="house.n3.yr">Today</span>
+      <h3 data-i18n="house.n3.t">New Bright</h3>
+      <p data-i18n="house.n3.p">Chinese Noodles · Pancit Canton, built around one idea: the flavor is part of the noodle itself.</p>
+      <span class="tag" data-i18n="house.n3.tag">The brand</span>
+    </li>
+  </ol>
+
+  <ul class="facts">
+    <li data-reveal style="--i:0"><b data-i18n="fact.1.v">2021</b><span data-i18n="fact.1.l">Local manufacturing</span></li>
+    <li data-reveal style="--i:1"><b data-i18n="fact.2.v">Saudi Arabia</b><span data-i18n="fact.2.l">Made in</span></li>
+    <li data-reveal style="--i:2"><b data-i18n="fact.3.v">Al Khobar</b><span data-i18n="fact.3.l">Eastern Province</span></li>
+    <li data-reveal style="--i:3"><b data-i18n="fact.4.v">4</b><span data-i18n="fact.4.l">Flavor varieties</span></li>
+    <li data-reveal style="--i:4"><b>200<small>g</small></b><span data-i18n="fact.5.l">Net pack</span></li>
+    <li data-reveal style="--i:5"><b data-i18n="fact.6.v">GMO-free</b><span data-i18n="fact.6.l">As stated on the pack</span></li>
+  </ul>
+
+  <div class="vm">
+    <div class="vm-grid">
+      <div data-reveal><p class="vm-k" data-i18n="vm.v.k">Vision</p><p class="vm-t" data-i18n="vm.v.t">To become a leading Saudi noodle brand in the region, recognized for distinctive flavor, dependable quality, practical convenience and continuous innovation.</p></div>
+      <div data-reveal style="--i:1"><p class="vm-k" data-i18n="vm.m.k">Mission</p><p class="vm-t" data-i18n="vm.m.t">To create high-quality Saudi-made noodles that make everyday meals simpler and more enjoyable through distinctive flavors, convenient preparation and the freedom to personalize every dish.</p></div>
+    </div>
+    <ul class="values">
+      <li data-reveal style="--i:0"><b>01</b><h3 data-i18n="val.1.t">Quality</h3><p data-i18n="val.1.p">Ingredient selection and a dependable experience.</p></li>
+      <li data-reveal style="--i:1"><b>02</b><h3 data-i18n="val.2.t">Innovation</h3><p data-i18n="val.2.p">New products, flavors and ideas for changing tastes.</p></li>
+      <li data-reveal style="--i:2"><b>03</b><h3 data-i18n="val.3.t">Customer focus</h3><p data-i18n="val.3.p">Lasting relationships with consumers, retailers and partners.</p></li>
+      <li data-reveal style="--i:3"><b>04</b><h3 data-i18n="val.4.t">Simplicity</h3><p data-i18n="val.4.p">Easy to prepare, flexible for any meal.</p></li>
+      <li data-reveal style="--i:4"><b>05</b><h3 data-i18n="val.5.t">Responsibility</h3><p data-i18n="val.5.p">Efficient operations, less waste, more recyclable materials.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═════════ 03 · COLLECTION ═════════ -->
+<section class="coll" id="collection" data-ch="2" data-hdr="light" aria-labelledby="collTitle">
+  <div class="coll-head">
+    <p class="eyebrow dark" data-reveal><i class="dot"></i><span data-i18n="coll.eyebrow">The collection</span></p>
+    <h2 id="collTitle" data-reveal style="--i:1" data-i18n="coll.title">Four flavors. One strand.</h2>
+    <p class="coll-sub" data-reveal style="--i:2" data-i18n="coll.sub">From mild and versatile to rich and savory. The flavor is built into every one.</p>
+  </div>
+  <div class="acc" id="acc">
+    <article class="panel on" data-f="plain" style="--c:var(--yellow);--on:var(--burg);--pat:url(assets/patterns/arcs.svg);--pat-s:cover">
+      <button class="panel-hit" type="button" aria-expanded="true"><span class="sr" data-i18n="f.plain.name">Plain</span></button>
+      <span class="num">01</span>
+      <span class="vname" aria-hidden="true"><span data-i18n="f.plain.name">Plain</span></span>
+      <div class="info"><h3 data-i18n="f.plain.name">Plain</h3><p data-i18n="f.plain.desc"></p><a class="stage-link" href="#top" data-f="plain"><span data-i18n="coll.view">See it on stage</span><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></div>
+      <img class="pic" src="assets/packs/plain.webp" width="1820" height="1809" alt="" loading="lazy">
+    </article>
+    <article class="panel" data-f="vegetables" style="--c:var(--green);--on:var(--cream);--pat:url(assets/patterns/maze.svg);--pat-s:cover">
+      <button class="panel-hit" type="button" aria-expanded="false"><span class="sr" data-i18n="f.vegetables.name">Vegetables</span></button>
+      <span class="num">02</span>
+      <span class="vname" aria-hidden="true"><span data-i18n="f.vegetables.name">Vegetables</span></span>
+      <div class="info"><h3 data-i18n="f.vegetables.name">Vegetables</h3><p data-i18n="f.vegetables.desc"></p><a class="stage-link" href="#top" data-f="vegetables"><span data-i18n="coll.view">See it on stage</span><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></div>
+      <img class="pic" src="assets/packs/vegetables.webp" width="1820" height="1809" alt="" loading="lazy">
+    </article>
+    <article class="panel" data-f="chicken" style="--c:var(--orange);--on:var(--burg);--pat:url(assets/patterns/squiggle.svg);--pat-s:900px auto">
+      <button class="panel-hit" type="button" aria-expanded="false"><span class="sr" data-i18n="f.chicken.name">Chicken</span></button>
+      <span class="num">03</span>
+      <span class="vname" aria-hidden="true"><span data-i18n="f.chicken.name">Chicken</span></span>
+      <div class="info"><h3 data-i18n="f.chicken.name">Chicken</h3><p data-i18n="f.chicken.desc"></p><a class="stage-link" href="#top" data-f="chicken"><span data-i18n="coll.view">See it on stage</span><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></div>
+      <img class="pic" src="assets/packs/chicken.webp" width="1820" height="1809" alt="" loading="lazy">
+    </article>
+    <article class="panel" data-f="beef" style="--c:var(--spice);--on:var(--cream);--pat:url(assets/patterns/weave.svg);--pat-s:700px auto">
+      <button class="panel-hit" type="button" aria-expanded="false"><span class="sr" data-i18n="f.beef.name">Beef</span></button>
+      <span class="num">04</span>
+      <span class="vname" aria-hidden="true"><span data-i18n="f.beef.name">Beef</span></span>
+      <div class="info"><h3 data-i18n="f.beef.name">Beef</h3><p data-i18n="f.beef.desc"></p><a class="stage-link" href="#top" data-f="beef"><span data-i18n="coll.view">See it on stage</span><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></div>
+      <img class="pic" src="assets/packs/beef.webp" width="1820" height="1809" alt="" loading="lazy">
+    </article>
+  </div>
+</section>
+
+<!-- ═════════ 04 · THE IDEA — one strand, four flavors ═════════ -->
+<section class="story" id="idea" data-ch="3" data-hdr="light" data-step="0" aria-labelledby="storyTitle">
+  <div class="story-pin">
+    <div class="sb" aria-hidden="true">
+      <div class="sb-l" style="--c:var(--orange);--pt:var(--burg);--pat:url(assets/patterns/squiggle.svg);--ps:1000px auto"></div>
+      <div class="sb-l" style="--c:var(--green);--pt:var(--cream);--pat:url(assets/patterns/maze.svg);--ps:cover"></div>
+      <div class="sb-l" style="--c:var(--spice);--pt:var(--cream);--pat:url(assets/patterns/weave.svg);--ps:760px auto"></div>
+      <div class="sb-l" style="--c:var(--yellow);--pt:var(--burg);--pat:url(assets/patterns/arcs.svg);--ps:cover"></div>
+    </div>
+    <svg class="spine d" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path class="sp-thin" pathLength="1" d="M-30 150 C150 90 330 200 520 140 S 790 70 770 270 S 700 480 868 468" transform="translate(0 -30)"/><path class="sp-thin" pathLength="1" d="M-30 150 C150 90 330 200 520 140 S 790 70 770 270 S 700 480 868 468" transform="translate(0 -15)"/><path class="sp-thin" pathLength="1" d="M-30 150 C150 90 330 200 520 140 S 790 70 770 270 S 700 480 868 468" transform="translate(0 15)"/><path class="sp-thin" pathLength="1" d="M-30 150 C150 90 330 200 520 140 S 790 70 770 270 S 700 480 868 468" transform="translate(0 30)"/>
+        <path class="sp-main" pathLength="1" d="M-30 150 C150 90 330 200 520 140 S 790 70 770 270 S 700 480 868 468"/>
+        <path class="sp-hi" pathLength="1" d="M-30 150 C150 90 330 200 520 140 S 790 70 770 270 S 700 480 868 468" transform="translate(-3 -5)"/>
+        <circle class="sp-tip" r="15" cx="-50" cy="-50"/>
+      </svg>
+    <svg class="spine m" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path class="sp-thin" pathLength="1" d="M-20 400 C90 330 170 470 260 405 S 372 372 300 452 S 236 470 195 498" transform="translate(0 -30)"/><path class="sp-thin" pathLength="1" d="M-20 400 C90 330 170 470 260 405 S 372 372 300 452 S 236 470 195 498" transform="translate(0 -15)"/><path class="sp-thin" pathLength="1" d="M-20 400 C90 330 170 470 260 405 S 372 372 300 452 S 236 470 195 498" transform="translate(0 15)"/><path class="sp-thin" pathLength="1" d="M-20 400 C90 330 170 470 260 405 S 372 372 300 452 S 236 470 195 498" transform="translate(0 30)"/>
+        <path class="sp-main" pathLength="1" d="M-20 400 C90 330 170 470 260 405 S 372 372 300 452 S 236 470 195 498"/>
+        <path class="sp-hi" pathLength="1" d="M-20 400 C90 330 170 470 260 405 S 372 372 300 452 S 236 470 195 498" transform="translate(-3 -5)"/>
+        <circle class="sp-tip" r="15" cx="-50" cy="-50"/>
+      </svg>
+    <div class="story-copy">
+      <p class="eyebrow"><i class="dot"></i><span data-i18n="story.eyebrow">The idea</span></p>
+      <h2 id="storyTitle" data-i18n="story.title">Flavor built in.</h2>
+      <div class="steps">
+        <div class="step" data-i="0"><span class="ftag" data-i18n="f.chicken.name"></span><h3 data-i18n="story.1.t"></h3><p data-i18n="story.1.p"></p></div>
+        <div class="step" data-i="1"><span class="ftag" data-i18n="f.vegetables.name"></span><h3 data-i18n="story.2.t"></h3><p data-i18n="story.2.p"></p></div>
+        <div class="step" data-i="2"><span class="ftag" data-i18n="f.beef.name"></span><h3 data-i18n="story.3.t"></h3><p data-i18n="story.3.p"></p></div>
+        <div class="step" data-i="3"><span class="ftag" data-i18n="f.plain.name"></span><h3 data-i18n="story.4.t"></h3><p data-i18n="story.4.p"></p></div>
+      </div>
+      <div class="story-count" aria-hidden="true"><b id="stepNum">01</b><span>/ 04</span><i class="bar"><u id="stepBar"></u></i></div>
+    </div>
+    <div class="plate" aria-hidden="true">
+        <img class="dish" data-i="0" src="assets/food/dish-chicken.webp" alt="" loading="lazy">
+        <img class="dish" data-i="1" src="assets/food/dish-vegetables.webp" alt="" loading="lazy">
+        <img class="dish" data-i="2" src="assets/food/dish-beef.webp" alt="" loading="lazy">
+        <img class="dish" data-i="3" src="assets/food/dish-plain.webp" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 05 · MADE IN SAUDI ═════════ -->
+<section class="made" id="made" data-ch="4" data-hdr="dark" aria-labelledby="madeTitle">
+  <div class="band" aria-hidden="true"><div class="band-in" id="band"><span data-i18n="made.band">MADE IN SAUDI ARABIA</span><i></i><span class="o" data-i18n="made.band">MADE IN SAUDI ARABIA</span><i></i><span data-i18n="made.band">MADE IN SAUDI ARABIA</span></div></div>
+  <div class="made-grid">
+    <div class="made-copy">
+      <p class="eyebrow" data-reveal><i class="dot"></i><span data-i18n="made.eyebrow">Al Rammah Factory · Al Khobar</span></p>
+      <h2 id="madeTitle" data-reveal style="--i:1" data-i18n="made.title">Born in the Kingdom.</h2>
+      <ol class="chapters">
+        <li data-reveal style="--i:0"><b>01</b><div><h3 data-i18n="made.1.t"></h3><p data-i18n="made.1.p"></p></div></li>
+        <li data-reveal style="--i:0"><b>02</b><div><h3 data-i18n="made.2.t"></h3><p data-i18n="made.2.p"></p></div></li>
+        <li data-reveal style="--i:0"><b>03</b><div><h3 data-i18n="made.3.t"></h3><p data-i18n="made.3.p"></p></div></li>
+        <li data-reveal style="--i:0"><b>04</b><div><h3 data-i18n="made.4.t"></h3><p data-i18n="made.4.p"></p></div></li>
+      </ol>
+    </div>
+    <figure class="map" data-reveal="map">
+      <img src="assets/food/saudi-map.webp" width="1217" height="1113" alt="" loading="lazy">
+      <span class="ping" aria-hidden="true"></span>
+      <figcaption data-i18n="made.cap">Starting in the Eastern Province, growing outward. Illustrative.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ═════════ 06 · WHITE LABEL ═════════ -->
+<section class="label" id="label" data-ch="5" data-hdr="light" aria-labelledby="labelTitle">
+  <div class="label-grid">
+    <div class="label-copy">
+      <p class="eyebrow dark" data-reveal><i class="dot"></i><span data-i18n="label.eyebrow">White label · concept</span></p>
+      <h2 id="labelTitle" data-reveal style="--i:1" data-i18n="label.title">Your name. Our strand.</h2>
+      <p class="label-p" data-reveal style="--i:2" data-i18n="label.p">Picture your own brand on a carton of New Bright noodles. A concept to explore together. Specifics are confirmed with the factory.</p>
+      <ol class="label-steps" data-reveal style="--i:3">
+        <li><b>01</b><span data-i18n="label.s1">Choose the flavor</span></li>
+        <li><b>02</b><span data-i18n="label.s2">Put your name on it</span></li>
+        <li><b>03</b><span data-i18n="label.s3">Talk to the factory</span></li>
+      </ol>
+      <div class="label-ctl" data-reveal style="--i:4">
+        <div class="seg" role="radiogroup" data-i18n-aria="label.seg" aria-label="Brand">
+          <button type="button" role="radio" aria-checked="true" data-brand="nb" data-i18n="label.nb">New Bright</button>
+          <button type="button" role="radio" aria-checked="false" data-brand="sufra" data-i18n="label.yours">Your brand</button>
+        </div>
+        <div class="dots" role="radiogroup" data-i18n-aria="hero.pick" aria-label="Flavor" id="cartonFlavors">
+          <button type="button" role="radio" aria-checked="true" data-f="plain" style="--c:var(--yellow)"><span class="sr" data-i18n="f.plain.name">Plain</span></button>
+          <button type="button" role="radio" aria-checked="false" data-f="vegetables" style="--c:var(--green)"><span class="sr" data-i18n="f.vegetables.name">Vegetables</span></button>
+          <button type="button" role="radio" aria-checked="false" data-f="chicken" style="--c:var(--orange)"><span class="sr" data-i18n="f.chicken.name">Chicken</span></button>
+          <button type="button" role="radio" aria-checked="false" data-f="beef" style="--c:var(--spice)"><span class="sr" data-i18n="f.beef.name">Beef</span></button>
+        </div>
+      </div>
+      <a class="btn btn-fill dark" href="#close" data-reveal style="--i:5"><span data-i18n="label.cta">Start a white-label enquiry</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+
+    <div class="stage3d" id="stage3d">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="carton-user" id="cartonUser">
+        <div class="carton-spin" id="cartonSpin">
+          <div class="carton" id="carton" data-brand="nb">
+            <div class="face f-front"><img id="imgFront" src="assets/pack3d/nb-plain-front.webp" width="1300" height="1503" alt=""></div>
+            <div class="face f-left"><img id="imgSpine" src="assets/pack3d/nb-plain-spine.webp" width="205" height="1503" alt=""></div>
+            <div class="face f-right"></div>
+            <div class="face f-back"></div>
+            <div class="face f-top"></div>
+            <div class="face f-bottom"></div>
+          </div>
+        </div>
+      </div>
+      <span class="floor-shadow" aria-hidden="true"></span>
+      <p class="stage-note"><span data-i18n="label.note">Concept illustration. The second brand is invented. Drag to turn.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 07 · PARTNERS: a belt that carries the strand past three stations ═════════ -->
+<section class="partners" id="partners" data-ch="6" data-hdr="light" data-step="0" aria-labelledby="partTitle">
+  <div class="pp-pin">
+    <div class="pp-track" id="ppTrack">
+      <svg class="belt" viewBox="0 0 4000 1000" preserveAspectRatio="none" aria-hidden="true">
+        <path class="b-thin" pathLength="1" d="M-40 842 C 300 806 520 880 900 842 S 1500 800 2000 846 S 2700 884 3000 840 S 3700 806 4040 844" transform="translate(0 38)"/>
+        <path class="b-main" pathLength="1" d="M-40 842 C 300 806 520 880 900 842 S 1500 800 2000 846 S 2700 884 3000 840 S 3700 806 4040 844"/>
+        <path class="b-hi" pathLength="1" d="M-40 842 C 300 806 520 880 900 842 S 1500 800 2000 846 S 2700 884 3000 840 S 3700 806 4040 844" transform="translate(0 -6)"/>
+      </svg>
+
+      <article class="pp p0">
+        <div class="pp-text">
+          <p class="eyebrow dark"><i class="dot"></i><span data-i18n="part.eyebrow">Partnerships</span></p>
+          <h2 id="partTitle" data-i18n="part.title">Grow with the strand.</h2>
+          <p class="pp-intro" data-i18n="part.intro">For distributors, retailers and foodservice businesses.</p>
+          <p class="pp-hint"><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-i18n="part.hint">Keep scrolling</span></p>
+        </div>
+        <div class="vis-wrap v0" aria-hidden="true"><div class="vis row4"><img class="pk" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:0%;--y:0%;--d:0ms"><img class="pk" src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:20%;--y:0%;--d:80ms"><img class="pk" src="assets/packs/chicken.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:40%;--y:0%;--d:160ms"><img class="pk" src="assets/packs/beef.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:60%;--y:0%;--d:240ms"></div></div>
+      </article>
+
+      <article class="pp p1">
+        <span class="ghost" aria-hidden="true">01</span>
+        <div class="pp-text">
+          <p class="eyebrow"><i class="dot"></i><span data-i18n="part.1.k">Station 01</span></p>
+          <h3 data-i18n="part.1.t">Distributors</h3>
+          <p class="pp-p" data-i18n="part.1.p"></p>
+          <ul class="pp-list"><li data-i18n="part.1.c1"></li><li data-i18n="part.1.c2"></li><li data-i18n="part.1.c3"></li></ul>
+          <a class="btn btn-fill" href="#close"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="vis-wrap" aria-hidden="true">
+          <div class="vis pallet"><img class="pk" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:0%;--y:9%;--d:0ms"><img class="pk" src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:32%;--y:9%;--d:70ms"><img class="pk" src="assets/packs/chicken.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:64%;--y:9%;--d:140ms"><img class="pk" src="assets/packs/beef.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:16%;--y:31%;--d:210ms"><img class="pk" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:48%;--y:31%;--d:280ms"><img class="pk" src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:32%;--y:53%;--d:350ms"><span class="slab"><i></i><i></i><i></i></span></div>
+        </div>
+      </article>
+
+      <article class="pp p2">
+        <span class="ghost" aria-hidden="true">02</span>
+        <div class="pp-text">
+          <p class="eyebrow"><i class="dot"></i><span data-i18n="part.2.k">Station 02</span></p>
+          <h3 data-i18n="part.2.t">Retailers</h3>
+          <p class="pp-p" data-i18n="part.2.p"></p>
+          <ul class="pp-list"><li data-i18n="part.2.c1"></li><li data-i18n="part.2.c2"></li><li data-i18n="part.2.c3"></li></ul>
+          <a class="btn btn-fill" href="#close"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="vis-wrap" aria-hidden="true">
+          <div class="vis shelf"><img class="pk" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:0%;--y:10%;--d:0ms"><img class="pk" src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:24%;--y:10%;--d:60ms"><img class="pk" src="assets/packs/chicken.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:48%;--y:10%;--d:120ms"><img class="pk" src="assets/packs/beef.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:72%;--y:10%;--d:180ms"><img class="pk" src="assets/packs/beef.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:0%;--y:56%;--d:240ms"><img class="pk" src="assets/packs/chicken.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:24%;--y:56%;--d:300ms"><img class="pk" src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:48%;--y:56%;--d:360ms"><img class="pk" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:72%;--y:56%;--d:420ms"><span class="board b1"></span><span class="board b2"></span></div>
+        </div>
+      </article>
+
+      <article class="pp p3">
+        <span class="ghost" aria-hidden="true">03</span>
+        <div class="pp-text">
+          <p class="eyebrow"><i class="dot"></i><span data-i18n="part.3.k">Station 03</span></p>
+          <h3 data-i18n="part.3.t">Foodservice</h3>
+          <p class="pp-p" data-i18n="part.3.p"></p>
+          <ul class="pp-list"><li data-i18n="part.3.c1"></li><li data-i18n="part.3.c2"></li><li data-i18n="part.3.c3"></li></ul>
+          <a class="btn btn-fill" href="#close"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="vis-wrap" aria-hidden="true">
+          <div class="vis dishes"><span class="plate-bg"></span><img class="d1" src="assets/food/dish-beef.webp" alt="" loading="lazy"><img class="d2" src="assets/food/dish-vegetables.webp" alt="" loading="lazy"></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="pp-pager" role="group" data-i18n-aria="part.pager" aria-label="Partner types">
+      <button type="button" data-go="1"><b>01</b><span data-i18n="part.1.t">Distributors</span></button>
+      <button type="button" data-go="2"><b>02</b><span data-i18n="part.2.t">Retailers</span></button>
+      <button type="button" data-go="3"><b>03</b><span data-i18n="part.3.t">Foodservice</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 08 · CLOSE ═════════ -->
+<section class="close" id="close" data-ch="7" data-hdr="dark" aria-labelledby="closeTitle">
+  <svg class="close-chop" viewBox="0 0 343 344.7" width="343" height="345" aria-hidden="true"><path fill="#fec65e" d="M171.4 52.6L171.4 74.1L343 77.3L343 49.4L171.4 52.6"/><path fill="#fec65e" d="M55.6 54.7L0 55.8L0 70.9L55.6 72L55.6 54.7"/><g><path class="st" style="--k:0" fill="#fec65e" d="M57.3 268.2C54.7 268.2 52.6 265.9 52.6 263L52.6 19.9C52.6 17.1 54.7 14.7 57.3 14.7C59.9 14.7 62 17.1 62 19.9L62 263C62 265.9 59.9 268.2 57.3 268.2"/><path class="st" style="--k:1" fill="#fec65e" d="M78.7 248.4C76.2 248.4 74.1 246.2 74.1 243.6L74.1 19.5C74.1 16.9 76.2 14.7 78.7 14.7C81.3 14.7 83.3 16.9 83.3 19.5L83.3 243.6C83.3 246.2 81.3 248.4 78.7 248.4"/><path class="st" style="--k:2" fill="#fec65e" d="M101.9 268.2C99.4 268.2 97.3 265.9 97.3 263.1L97.3 19.8C97.3 17 99.4 14.7 101.9 14.7C104.4 14.7 106.5 17 106.5 19.8L106.5 263.1C106.5 265.9 104.4 268.2 101.9 268.2"/><path class="st" style="--k:3" fill="#fec65e" d="M125 284.5C122.5 284.5 120.5 282.2 120.5 279.3L120.5 20C120.5 17.1 122.5 14.7 125 14.7C127.6 14.7 129.6 17.1 129.6 20L129.6 279.3C129.6 282.2 127.6 284.5 125 284.5"/><path class="st" style="--k:4" fill="#fec65e" d="M171.4 344.7C168.8 344.7 166.8 341.6 166.8 337.8L166.8 21.7C166.8 17.8 168.8 14.7 171.4 14.7C173.9 14.7 176 17.8 176 21.7L176 337.8C176 341.6 173.9 344.7 171.4 344.7"/><path class="st" style="--k:5" fill="#fec65e" d="M148.2 296.6C145.7 296.6 143.6 294.2 143.6 291.4L143.6 19.9C143.6 17.1 145.7 14.7 148.2 14.7C150.7 14.7 152.8 17.1 152.8 19.9L152.8 291.4C152.8 294.2 150.7 296.6 148.2 296.6"/></g><path fill="#fec65e" d="M37.7 5.7L37.7 20.8L343 26.5L343 0L37.7 5.7"/></svg>
+  <div class="close-copy">
+    <p class="eyebrow" data-reveal><i class="dot"></i><span data-i18n="close.eyebrow">Contact Us</span></p>
+    <h2 id="closeTitle" data-reveal style="--i:1" data-i18n="close.title">Flavor in every strand</h2>
+    <p class="close-sub" data-reveal style="--i:2" data-i18n="close.sub">Four Flavors. One Distinctive Noodle Experience</p>
+    <div class="cta-row" data-reveal style="--i:3">
+      <a class="btn btn-cream" href="mailto:newbright@alrammah.com.sa?subject=New%20Bright%20-%20Request%20a%20quote"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-line light" href="#top" data-i18n="close.cta2">Flavor range</a>
+    </div>
+    <dl class="close-contact" data-reveal style="--i:4">
+      <div><dt data-i18n="c.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
+      <div><dt data-i18n="c.email">Email</dt><dd><a href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a></dd></div>
+      <div><dt data-i18n="c.address">Address</dt><dd data-i18n="c.addr">Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia</dd></div>
+    </dl>
+  </div>
+  <div class="row-packs" id="rowPacks" aria-hidden="true">
+    <img src="assets/packs/plain.webp" alt="" loading="lazy" style="--i:0">
+    <img src="assets/packs/vegetables.webp" alt="" loading="lazy" style="--i:1">
+    <img src="assets/packs/chicken.webp" alt="" loading="lazy" style="--i:2">
+    <img src="assets/packs/beef.webp" alt="" loading="lazy" style="--i:3">
+  </div>
+</section>
+</main>
+
+<footer class="foot" data-hdr="dark">
+  <span class="ft-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a class="ft-logo" href="#top" aria-label="New Bright"><img src="assets/brand/logo.svg" alt="New Bright" width="591" height="105"></a>
+      <p class="ft-say" data-i18n="foot.say">Flavor in every strand</p>
+      <p class="ft-meta"><span data-i18n="menu.tag">Chinese Noodles · Pancit Canton</span><br><span data-i18n="made.by">Al Rammah Factory, Al Khobar</span></p>
+    </div>
+    <nav class="ft-nav" aria-label="Footer">
+      <p class="ft-h" data-i18n="foot.explore">Explore</p>
+      <ul>
+        <li><a href="#top" data-i18n="ch.hero">The flavors</a></li>
+        <li><a href="#intro" data-i18n="ch.intro">The company</a></li>
+        <li><a href="#idea" data-i18n="ch.idea">The idea</a></li>
+        <li><a href="#made" data-i18n="ch.made">Made in Saudi</a></li>
+        <li><a href="#label" data-i18n="ch.label">White label</a></li>
+        <li><a href="#partners" data-i18n="ch.partners">Partners</a></li>
+      </ul>
+    </nav>
+    <div class="ft-biz">
+      <p class="ft-h" data-i18n="foot.business">Contact Us</p>
+      <a class="btn btn-cream" href="#close"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="ft-link ft-tel" href="tel:+966557287799" dir="ltr">+966 55 728 7799</a>
+      <a class="ft-link ft-tel" href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a>
+      <a class="ft-link" href="#partners"><span data-i18n="hero.cta2">Partnerships</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+
+  <div class="ft-tape" role="group" data-i18n-aria="foot.flavors" aria-label="The four flavors">
+    <a class="ft-flavor" href="#top" data-f="plain" style="--c:var(--yellow);--on:var(--burg)"><span data-i18n="f.plain.name">Plain</span><b>01</b></a>
+    <a class="ft-flavor" href="#top" data-f="vegetables" style="--c:var(--green);--on:var(--cream)"><span data-i18n="f.vegetables.name">Vegetables</span><b>02</b></a>
+    <a class="ft-flavor" href="#top" data-f="chicken" style="--c:var(--orange);--on:var(--burg)"><span data-i18n="f.chicken.name">Chicken</span><b>03</b></a>
+    <a class="ft-flavor" href="#top" data-f="beef" style="--c:var(--spice);--on:var(--cream)"><span data-i18n="f.beef.name">Beef</span><b>04</b></a>
+  </div>
+
+  <div class="ft-bottom">
+    <p class="ft-fine" data-i18n="foot.fine">Design concept. Content from the New Bright Company Profile and Brand Guideline (2026).</p>
+    <a class="ft-up" href="#top"><span data-i18n="foot.top">Back to top</span><i><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i></a>
+  </div>
+</footer>
+
+<script src="app.js?v=14"></script>
+</body>
+</html>

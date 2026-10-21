@@ -144,8 +144,8 @@ body[data-hdr=dark] .pill-solid{background:var(--yellow);color:var(--burg)}
 .rail{position:fixed;inset-inline-start:clamp(.3rem,.9vw,1rem);inset-block:0;margin-block:auto;height:max-content;z-index:40;display:none;color:var(--burg);transition:color .4s}
 body[data-rail=dark] .rail{color:var(--cream)}
 .rail ol{display:flex;flex-direction:column;gap:1.05rem;position:relative}
-.rail a{display:grid;place-items:center;width:1.7rem;height:1.7rem;text-decoration:none;position:relative}
-.rail a b{font-size:.62rem;font-weight:700;letter-spacing:.04em;opacity:.45;transition:opacity .3s,transform .4s var(--ease)}
+.rail a{display:grid;place-items:center;width:2rem;height:1.9rem;text-decoration:none;position:relative}
+.rail a b{font-size:.78rem;font-weight:700;letter-spacing:.04em;opacity:.55;transition:opacity .3s,transform .4s var(--ease)}
 .rail a.on b{opacity:1;transform:scale(1.35);font-weight:900}
 .rail a:hover b{opacity:1}
 .rail-line{position:absolute;inset-block:.6rem;inset-inline-start:.8rem;width:2px;background:color-mix(in srgb,currentColor 18%,transparent);display:none}
@@ -248,6 +248,10 @@ body[data-rail=dark] .rail{color:var(--cream)}
 @media (min-width:1000px){.flavor-note{display:block}}
 
 /* hero — tablet / phone compositions */
+@media (min-width:1180px){
+  .pack[data-slot="1"]{--ox:.40}.pack[data-slot="2"]{--ox:.70}.pack[data-slot="3"]{--ox:.94}
+  .hero{--cx:48vw}
+}
 @media (min-width:1000px) and (max-width:1279px){
   .hero{--w:min(34vw,54svh);--cx:57vw}
   .pack[data-slot="1"]{--ox:.42}.pack[data-slot="2"]{--ox:.74}.pack[data-slot="3"]{--ox:.98}
@@ -382,7 +386,7 @@ body[data-rail=dark] .rail{color:var(--cream)}
 }
 
 /* ═══ 04 · The idea — one strand draws itself; each step floods the screen with a flavor ═══ */
-.story{position:relative;height:540vh;--fg:var(--burg);--strand:var(--cream);color:var(--fg);transition:color .6s}
+.story{position:relative;height:400vh;--fg:var(--burg);--strand:var(--cream);color:var(--fg);transition:color .6s}
 .story[data-step="1"]{--fg:var(--cream);--strand:var(--yellow)}
 .story[data-step="2"]{--fg:var(--cream);--strand:var(--yellow)}
 .story[data-step="3"]{--fg:var(--burg);--strand:var(--burg)}
@@ -421,7 +425,7 @@ body[data-rail=dark] .rail{color:var(--cream)}
 .dish{position:absolute;width:122%;max-width:none;height:auto;opacity:0;transform:scale(.86) rotate(-5deg);transition:opacity .6s,transform 1.3s var(--ease);filter:drop-shadow(0 26px 22px rgb(40 10 10/.35))}
 .story[data-step="0"] .dish[data-i="0"],.story[data-step="1"] .dish[data-i="1"],.story[data-step="2"] .dish[data-i="2"],.story[data-step="3"] .dish[data-i="3"]{opacity:1;transform:none;transition-delay:.2s,.2s}
 @media (max-width:899px){
-  .story{height:480vh}
+  .story{height:360vh}
   .story-pin{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-items:start;gap:0;padding-block-end:1rem}
   .sb-l{clip-path:circle(calc(var(--w,1)*135vmax) at 50% 80%)}
   [dir=rtl] .sb-l{clip-path:circle(calc(var(--w,1)*135vmax) at 50% 80%)}
@@ -462,12 +466,8 @@ body[data-rail=dark] .rail{color:var(--cream)}
 .map.in{--mw:112%}
 .map{--mw:0%;transition:--mw 2.2s var(--ease-io) .1s}
 .map img{transition:opacity .6s}
-.ping{position:absolute;inset-inline-start:47.2%;inset-block-start:50.3%;width:1rem;height:1rem;margin:-.5rem;border-radius:50%;background:var(--yellow);opacity:0;transition:opacity .6s 1.4s}
-.map.in .ping{opacity:1}
-.ping::before,.ping::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--yellow);animation:ping 3s var(--ease) infinite}
-.ping::after{animation-delay:1.5s}
-@keyframes ping{from{transform:scale(1);opacity:.9}to{transform:scale(5);opacity:0}}
 .map figcaption{margin-block-start:.8rem;font-size:.85rem;color:rgb(247 232 217/.75);text-align:end}
+@media (min-width:1180px){.made-grid{padding-inline-end:calc(var(--pad) + 2.8rem)}}
 @media (max-width:899px){.made-grid{grid-template-columns:1fr}.map{max-width:34rem;margin-inline:auto}.chapters li{grid-template-columns:5.5rem 1fr;gap:1rem}}
 
 /* ═══ 06 · White label — a carton you can turn ═══════════ */
@@ -572,7 +572,7 @@ body[data-rail=dark] .rail{color:var(--cream)}
 
 /* pinned scene: vertical scroll slides the belt sideways */
 @media (prefers-reduced-motion:no-preference){
-  .js .partners{height:460vh;transition:none}
+  .js .partners{height:340vh;transition:none}
   .js .pp-pin{position:sticky;inset-block-start:0;height:100svh;overflow:hidden;background:var(--sbg);color:var(--sfg);transition:background-color .7s,color .7s}
   .js .partners[data-step="1"]{--sbg:var(--burg);--sfg:var(--cream);--sst:var(--yellow)}
   .js .partners[data-step="2"]{--sbg:var(--green);--sfg:var(--cream);--sst:var(--yellow)}
@@ -744,8 +744,8 @@ body[data-rail=dark] .sdock{--dbg:var(--cream);--dfg:var(--burg);--dline:var(--g
   .js [data-reveal]{opacity:1;transform:none}
   .hero:not(.is-in) .pack:not([data-slot="0"]){opacity:1}
   .row-packs img{--rise:0}
-  .map{--mw:112%}.map img{mask:none;-webkit-mask:none}.ping{opacity:1}
+  .map{--mw:112%}.map img{mask:none;-webkit-mask:none}
   .squig path{stroke-dashoffset:0}
-  .scroll-cue .ico,.ping::before,.ping::after{animation:none}
+  .scroll-cue .ico{animation:none}
 }
 @media print{.hdr,.rail,.scroll-cue{display:none}.js [data-reveal]{opacity:1;transform:none}}

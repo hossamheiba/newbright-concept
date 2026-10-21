@@ -11,7 +11,7 @@
 <link rel="preload" href="assets/fonts/cairo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/packs/plain.webp" as="image">
 <script>document.documentElement.classList.add('js');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nb-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=16">
+<link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body data-hdr="light">
 
@@ -48,7 +48,7 @@
   </nav>
 
 <!-- ───────── Menu ───────── -->
-<dialog class="menu" id="menu" aria-label="Menu">
+<dialog class="menu" id="menu" aria-label="Menu" data-lenis-prevent>
   <div class="menu-in">
     <button class="menu-x" id="menuX" type="button" aria-label="Close">
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
@@ -479,6 +479,7 @@
   </div>
 </footer>
 
-<script src="app.js?v=14"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="app.js?v=17"></script>
 </body>
 </html>

@@ -261,7 +261,7 @@ panels.forEach((p) => {
 /* ───────────── Partners pager ───────────── */
 $$('.pp-pager button').forEach((b) => b.addEventListener('click', () => {
   const n = +b.dataset.go, top = partners.getBoundingClientRect().top + scrollY, span = partners.offsetHeight - innerHeight;
-  scrollTo({ top: top + span * Math.min(n / 3, 0.96), behavior: reduce.matches ? 'auto' : 'smooth' });
+  goTo(top + span * Math.min(n / 3, 0.96));
 }));
 
 /* ───────────── White label: a carton you can turn ───────────── */
@@ -344,14 +344,29 @@ function paintCarton() {
 
 /* ───────────── Scroll engine ───────────── */
 const intro = $('.house'), story = $('.story'), sbLayers = $$('.sb-l'), partners = $('.partners'), PART_HDR = ['light', 'dark', 'dark', 'light'], STORY_HDR = ['light', 'dark', 'dark', 'light'], made = $('.made'), band = $('#band'), label = $('.label'), close = $('.close');
-const sections = $$('main > section[data-ch]');
+const sections = $$('main > section[data-ch]'), FOOT = $('.foot'), stepBar = $('#stepBar'), railFill = $('#railFill'), spines = $$('.spine');
 let words = [];
 let vh = innerHeight, metrics = {};
 const chKeys = ['ch.hero', 'ch.intro', 'ch.coll', 'ch.idea', 'ch.made', 'ch.label', 'ch.partners', 'ch.close'];
 let chIdx = 0, ticking = false, lastHdr = '';
 
+/* Layout cache: every section's position is measured once (and again on resize, font and image
+   load), so scrolling reads numbers instead of asking the browser for layout every frame. */
+const L = new Map();
+let docH = 0, spineOn = false;
+function cacheLayout() {
+  vh = innerHeight; docH = root.scrollHeight - vh;
+  const sy = scrollY;
+  [intro, story, partners, made, label, close, $('.foot'), ...sections].forEach((el) => {
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    L.set(el, { top: r.top + sy, height: r.height });
+  });
+  const sp = $('.spine.d'); spineOn = !!sp && getComputedStyle(sp).display !== 'none';
+}
+const R = (el) => { const c = L.get(el) || { top: 0, height: 0 }, t = c.top - scrollY; return { top: t, bottom: t + c.height, height: c.height }; };
 function measure() {
-  vh = innerHeight;
+  cacheLayout();
   ticking = false; schedule();
 }
 let cpTarget = 0, cpNow = 0, easing = false;
@@ -365,10 +380,11 @@ function easeLoop() {
   };
   requestAnimationFrame(tick);
 }
+const near = (el) => { const r = R(el); return r.bottom > -vh * 0.5 && r.top < vh * 1.5; };
 function schedule() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
 
 function progressOf(el, startAt = 0, endAt = 0) {
-  const r = el.getBoundingClientRect();
+  const r = R(el);
   const total = r.height - vh + startAt + endAt;
   return total <= 0 ? 0 : clamp((-r.top + startAt) / total);
 }
@@ -377,15 +393,15 @@ function updateHeaderTheme(force) {
   const y = 44;
   let theme = 'light', idx = 0;
   for (let i = 0; i < sections.length; i++) {
-    const r = sections[i].getBoundingClientRect();
+    const r = R(sections[i]);
     if (r.top <= y && r.bottom > y) { idx = +sections[i].dataset.ch; theme = sections[i].dataset.hdr || 'light'; if (idx === 0) theme = LIGHT_FLAVOR[cur] ? 'light' : 'dark'; break; }
   }
-  const f = $('.foot').getBoundingClientRect();
+  const f = R(FOOT);
   if (f.top <= y) { theme = 'dark'; idx = 7; }
   if (theme !== lastHdr || force) { document.body.dataset.hdr = theme; lastHdr = theme; }
   // the rail sits mid-screen, so it reads the section there
   let rt = 'light';
-  for (let i = 0; i < sections.length; i++) { const r = sections[i].getBoundingClientRect(); if (r.top <= vh * 0.5 && r.bottom > vh * 0.5) { rt = +sections[i].dataset.ch === 0 ? (LIGHT_FLAVOR[cur] ? 'light' : 'dark') : (sections[i].dataset.hdr || 'light'); break; } }
+  for (let i = 0; i < sections.length; i++) { const r = R(sections[i]); if (r.top <= vh * 0.5 && r.bottom > vh * 0.5) { rt = +sections[i].dataset.ch === 0 ? (LIGHT_FLAVOR[cur] ? 'light' : 'dark') : (sections[i].dataset.hdr || 'light'); break; } }
   if (f.top <= vh * 0.5) rt = 'dark';
   if (document.body.dataset.rail !== rt) document.body.dataset.rail = rt;
   if (idx !== chIdx || force) {
@@ -398,15 +414,15 @@ function updateHeaderTheme(force) {
 
 function frame() {
   ticking = false;
-  const y = scrollY, doc = root.scrollHeight - vh;
+  const y = scrollY, doc = docH;
 
   // the promise: the strands come down onto the noodles as the section passes
   if (intro) {
-    const r = intro.getBoundingClientRect();
+    const r = R(intro);
     intro.style.setProperty('--ip', clamp((vh * 0.85 - r.top) / (vh * 0.55)).toFixed(3));
   }
   // the idea: one strand draws itself; each step floods the stage with a flavor
-  if (story) {
+  if (story && near(story)) {
     const p = progressOf(story);
     const step = Math.min(3, Math.floor(p * 4 + 0.001));
     if (String(step) !== story.dataset.step) {
@@ -414,12 +430,11 @@ function frame() {
       story.dataset.hdr = STORY_HDR[step];
     }
     story.style.setProperty('--sp', ((p * 4) % 1 || (p >= 1 ? 1 : 0)).toFixed(3));
-    $('#stepBar').style.setProperty('--sp', ((p * 4) % 1 || (p >= 1 ? 1 : 0)).toFixed(3));
+    stepBar.style.setProperty('--sp', ((p * 4) % 1 || (p >= 1 ? 1 : 0)).toFixed(3));
     sbLayers.forEach((l, k) => l.style.setProperty('--w', (k === 0 ? 1 : clamp((p * 4 - (k - 0.5)) / 0.5)).toFixed(3)));
     const d = clamp(p * 1.05);
-    $$('.spine').forEach((svg) => {
-      const vis = svg.getBoundingClientRect().width > 0 && getComputedStyle(svg).display !== 'none';
-      if (!vis) return;
+    spines.forEach((svg) => {
+      if (svg.classList.contains('d') !== spineOn) return;
       $$('path', svg).forEach((pa, i) => {
         const lag = pa.classList.contains('sp-thin') ? 0.025 * (1 + (i % 4)) : 0;
         pa.style.strokeDashoffset = (1 - clamp(d - lag)).toFixed(4);
@@ -432,7 +447,7 @@ function frame() {
     });
   }
   // partners: vertical scroll slides the belt sideways, one station at a time
-  if (partners && !reduce.matches) {
+  if (partners && !reduce.matches && near(partners)) {
     const p = progressOf(partners), u = p * 3, i = Math.min(2, Math.floor(u)), f = u - i;
     let e = clamp((f - 0.2) / 0.6); e = e * e * (3 - 2 * e);
     const pos = i + e;
@@ -442,29 +457,33 @@ function frame() {
     if (String(step) !== partners.dataset.step) { partners.dataset.step = step; partners.dataset.hdr = PART_HDR[step]; }
   }
   // made in Saudi: the band slides with the page
-  if (made) {
-    const r = made.getBoundingClientRect();
+  if (made && near(made)) {
+    const r = R(made);
     band.style.setProperty('--mp', clamp((vh - r.top) / (vh + r.height * 0.6)).toFixed(3));
   }
   // white label: the carton turns as it passes
-  if (label) {
-    const r = label.getBoundingClientRect();
+  if (label && near(label)) {
+    const r = R(label);
     const p = clamp((vh - r.top) / (vh + r.height));
     baseRy = -44 + p * 52;
     paintCarton();
   }
   // closing: the chopsticks come down
   if (close) {
-    const r = close.getBoundingClientRect();
+    const r = R(close);
     cpTarget = clamp((vh * 0.9 - r.top) / (vh * 0.75));
     easeLoop();
   }
-  $('#railFill').style.height = (doc > 0 ? clamp(y / doc) * 100 : 0) + '%';
+  railFill.style.height = (doc > 0 ? clamp(y / doc) * 100 : 0) + '%';
   updateHeaderTheme(false);
 }
 
 addEventListener('scroll', schedule, { passive: true });
 addEventListener('resize', measure);
+addEventListener('load', measure);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+if ('ResizeObserver' in window) new ResizeObserver(() => { if (Math.abs(root.scrollHeight - vh - docH) > 2) measure(); }).observe(document.body);
+cacheLayout();
 
 /* ───────────── Reveals ───────────── */
 if ('IntersectionObserver' in window) {
@@ -474,16 +493,15 @@ if ('IntersectionObserver' in window) {
 
 /* ───────────── Menu ───────────── */
 const menu = $('#menu'), menuBtn = $('#menuBtn');
-function openMenu() { if (!menu.open) { menu.showModal(); menuBtn.setAttribute('aria-expanded', 'true'); } }
+function openMenu() { if (!menu.open) { menu.showModal(); menuBtn.setAttribute('aria-expanded', 'true'); if (lenis) lenis.stop(); } }
 function closeMenu() {
   if (!menu.open) return;
   menu.classList.add('closing');
-  setTimeout(() => { menu.close(); menu.classList.remove('closing'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.focus(); }, reduce.matches ? 0 : 380);
+  setTimeout(() => { menu.close(); menu.classList.remove('closing'); menuBtn.setAttribute('aria-expanded', 'false'); if (lenis) lenis.start(); menuBtn.focus(); }, reduce.matches ? 0 : 380);
 }
 menuBtn.addEventListener('click', openMenu);
 $('#menuX').addEventListener('click', closeMenu);
 menu.addEventListener('cancel', (e) => { e.preventDefault(); closeMenu(); });
-$$('.menu-list a').forEach((a) => a.addEventListener('click', () => { menu.close(); menuBtn.setAttribute('aria-expanded', 'false'); }));
 
 /* ───────────── Social dock ───────────── */
 const sdock = $('#sdock'), sdToggle = $('#sdToggle');
@@ -497,6 +515,29 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && sdock.ha
 document.addEventListener('pointerdown', (e) => { if (sdock.hasAttribute('data-open') && !sdock.contains(e.target)) sdSet(false); });
 
 $('#langBtn').addEventListener('click', () => applyLang(lang === 'ar' ? 'en' : 'ar'));
+
+/* ───────────── Smooth scrolling (Lenis, as on the main site: lerp 0.085) ───────────── */
+let lenis = null;
+if (window.Lenis && !reduce.matches) {
+  lenis = new Lenis({ lerp: 0.085, smoothWheel: true });
+  lenis.on('scroll', schedule);
+  const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
+  requestAnimationFrame(raf);
+}
+function goTo(target, offset = 0) {
+  if (lenis) lenis.scrollTo(target, { offset, duration: 1.4, easing: (x) => 1 - Math.pow(1 - x, 4) });
+  else if (typeof target === 'number') scrollTo({ top: target + offset, behavior: reduce.matches ? 'auto' : 'smooth' });
+  else target.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth' });
+}
+$$('a[href^="#"]').forEach((a) => a.addEventListener('click', (e) => {
+  const id = a.getAttribute('href');
+  if (id.length < 2 || e.defaultPrevented || e.metaKey || e.ctrlKey) return;
+  const el = document.querySelector(id); if (!el) return;
+  e.preventDefault();
+  if (a.closest('#menu')) { menu.close(); menuBtn.setAttribute('aria-expanded', 'false'); if (lenis) lenis.start(); }
+  goTo(el);
+  history.replaceState(null, '', id);
+}));
 
 /* ───────────── Go ───────────── */
 applyLang(lang);

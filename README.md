@@ -17,7 +17,12 @@ Content comes from the New Bright Company Profile and Brand Guideline (2026); Ar
 | White label | `whitelabel.html` · `whitelabel.css` · `whitelabel.js` | A box that folds and restyles (four design directions), then the enquiry form |
 | Contact | `contact.html` · `contact.css` · `contact.js` | Channels, three ways in (questions, business, white label) with the message form, head office, social accounts |
 
-Shared: `styles.css` (tokens, header, menu, social dock, footer, buttons, dropdown), `nav.js` (translates the menu and footer lists), `select.js` (the site's own dropdown, used by the forms), `assets/`.
+Shared: `styles.css` (tokens, header, menu, social dock, footer, buttons, dropdown, opening film), `nav.js` (translates the menu and footer lists), `select.js` (the site's own dropdown, used by the forms), `intro.js` (the opening film, home page only), `assets/`.
+
+## The opening film (home page only)
+
+`intro.js` plays `assets/video/intro.mp4` (a WebM copy is the fallback) full screen, silent, with a *Skip intro* button; when it ends, or is skipped, the page opens behind an iris that narrows on the middle of the screen while the hero moves in.
+It shows on a fresh visit and on every refresh. It does not replay when a visitor clicks *Home* from another page, and it is skipped for visitors who ask their device for reduced motion, or when the browser will not autoplay or the film stalls (a slow connection opens the site after a few seconds).
 
 ## How the pages connect
 

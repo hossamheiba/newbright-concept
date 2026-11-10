@@ -817,3 +817,24 @@ h2{line-height:1.06!important}
   .hero-copy{position:relative;inset:auto;padding-inline:var(--pad);max-width:none}
   .packs{position:relative;inset:auto;flex:1 0 auto;min-height:calc(var(--w) + var(--floor));margin-block-start:1.2rem}
 }
+
+/* ═══ The opening film (home page only; intro.js) ═══ */
+html.nbi-on{overflow:hidden}
+.nbi{display:none;position:fixed;inset:0;z-index:9999;overflow:hidden;background:#1a0808;clip-path:circle(150vmax at 50% 56%);transition:clip-path 1.2s cubic-bezier(.7,0,.2,1);-webkit-user-select:none;user-select:none}
+html.nbi-on .nbi,.nbi.out,.nbi.fast{display:block}
+.nbi video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;pointer-events:none;transform:scale(1);transition:transform 1.2s cubic-bezier(.7,0,.2,1)}
+.nbi::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 50%,transparent 58%,rgb(20 5 5/.42)),linear-gradient(0deg,rgb(20 5 5/.5),transparent 26%),linear-gradient(180deg,rgb(20 5 5/.38),transparent 22%)}
+.nbi-logo{position:absolute;z-index:2;inset-block-start:clamp(1.1rem,3vw,2rem);inset-inline-start:var(--pad);width:clamp(7.5rem,15vw,11.5rem);height:auto;filter:drop-shadow(0 6px 14px rgb(0 0 0/.45));opacity:0;transition:opacity .9s .3s}
+.nbi.is-playing .nbi-logo{opacity:1}
+.nbi-skip{position:absolute;z-index:2;inset-block-end:clamp(1.2rem,3.4vw,2.4rem);inset-inline-end:var(--pad);min-height:2.75rem;padding:0 1.3rem;border-radius:999px;border:1.5px solid rgb(247 232 217/.55);background:rgb(26 8 8/.42);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--cream);font-weight:700;font-size:.95rem;cursor:pointer;opacity:0;transition:opacity .6s .7s,background-color .3s,border-color .3s}
+.nbi.is-playing .nbi-skip{opacity:1}
+.nbi-skip:hover{background:rgb(247 232 217/.18);border-color:var(--cream)}
+.nbi-skip:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+/* closing: an iris narrowing on the middle of the page while the picture drifts forward */
+.nbi.out{clip-path:circle(0 at 50% 56%)}
+.nbi.out video{transform:scale(1.14)}
+.nbi.out .nbi-skip,.nbi.out .nbi-logo{opacity:0;transition:opacity .25s}
+.nbi.fast{clip-path:none;opacity:0;transition:opacity .45s}
+/* while the film plays the page waits, so its own entrance is seen when the film opens */
+html.nbi-on .hero *,html.nbi-on .hdr,html.nbi-on .hdr *{animation-play-state:paused!important}
+@media print{.nbi{display:none!important}}

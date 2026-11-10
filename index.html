@@ -11,9 +11,18 @@
 <link rel="preload" href="assets/fonts/cairo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/packs/plain.webp" as="image">
 <script>document.documentElement.classList.add('js');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nb-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=29">
+<script>(function(){var d=document.documentElement;try{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;var n=performance.getEntriesByType&&performance.getEntriesByType('navigation')[0];var internal=n&&n.type==='navigate'&&document.referrer&&new URL(document.referrer).origin===location.origin;var back=n&&n.type==='back_forward';if(!rm&&!internal&&!back)d.classList.add('nbi-on')}catch(e){d.classList.add('nbi-on')}})()</script>
+<link rel="stylesheet" href="styles.css?v=31">
 </head>
 <body data-hdr="light">
+<div class="nbi" id="nbIntro">
+  <video muted playsinline autoplay preload="auto" disablepictureinpicture disableremoteplayback tabindex="-1" aria-hidden="true" poster="assets/video/intro-poster.jpg">
+    <source src="assets/video/intro.mp4" type='video/mp4; codecs="avc1.64001f"'>
+    <source src="assets/video/intro.webm" type='video/webm; codecs="vp9"'>
+  </video>
+  <img class="nbi-logo" src="assets/brand/logo.svg" alt="New Bright" width="591" height="105">
+  <button class="nbi-skip" type="button">Skip intro</button>
+</div>
 
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
@@ -478,8 +487,9 @@
   </div>
 </footer>
 
+<script src="intro.js?v=1"></script>
 <script src="nav.js?v=1"></script>
 <script src="assets/vendor/lenis.min.js"></script>
-<script src="app.js?v=21"></script>
+<script src="app.js?v=22"></script>
 </body>
 </html>

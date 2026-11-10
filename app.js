@@ -229,7 +229,8 @@ selBtns.forEach((b, i) => b.addEventListener('keydown', (e) => {
 Object.values(packs).forEach((p) => p.addEventListener('click', (e) => selectFlavor(p.dataset.f, { x: e.clientX, y: e.clientY })));
 
 // choreography: the lead is already there; the other three slide out one after another
-requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add('is-in')));
+const startHero = () => requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add('is-in')));
+if (root.classList.contains('nbi-on')) addEventListener('nb:intro-done', startHero, { once: true }); else startHero();
 
 // depth: pointer parallax between the packs, the giant word and the copy
 if (fine.matches && !reduce.matches) {
@@ -521,6 +522,7 @@ $('#langBtn').addEventListener('click', () => { applyLang(lang === 'ar' ? 'en' :
 let lenis = null;
 if (window.Lenis && !reduce.matches) {
   lenis = new Lenis({ lerp: 0.085, smoothWheel: true });
+  if (root.classList.contains('nbi-on')) { lenis.stop(); addEventListener('nb:intro-done', () => lenis.start(), { once: true }); }
   lenis.on('scroll', schedule);
   const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
   requestAnimationFrame(raf);

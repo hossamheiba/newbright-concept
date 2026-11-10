@@ -45,7 +45,7 @@ const T = {
   "wl.nav.enquiry": "Start your white label",
   "wl.title": "White label",
   "wl.intro": "Your brand, our noodles. We make Asian-style noodles in Saudi Arabia, and we can make them for you, under your name.",
-  "wl.hint": "Scroll to fold your box",
+  "wl.step1": "Step 1 of 4", "wl.step2": "Step 2 of 4", "wl.step3": "Step 3 of 4", "wl.step4": "Step 4 of 4", "wl.hint": "Scroll to fold your box",
   "wl.j.eyebrow": "Your idea, step by step",
   "wl.j.title": "From your idea to our factory",
   "wl.j.intro": "Try an idea on a box: a flavor, a name, a look. Then tell us about it. It takes four stations and no commitment.",
@@ -71,7 +71,7 @@ const T = {
   "wl.sum.brand": "Brand",
   "wl.sum.flavor": "Flavor",
   "wl.sum.look": "Look",
-  "wl.drag": "Drag to turn",
+  "wl.drag": "Drag to turn, or use the arrows", "wl.turnl": "Turn the box left", "wl.turnr": "Turn the box right",
   "wl.shelf": "Your range, on the shelf",
   "wl.default": "Zest!",
   "wl.c.eyebrow": "Packaging concepts",
@@ -177,7 +177,7 @@ const T = {
   "wl.nav.enquiry": "ابدأ علامتك الخاصة",
   "wl.title": "علامتك الخاصة",
   "wl.intro": "علامتك، ونودلزنا. نصنع النودلز ذات الطابع الآسيوي في المملكة العربية السعودية، ويمكننا صنعها لك باسم علامتك.",
-  "wl.hint": "مرّر لتطوي علبتك",
+  "wl.step1": "الخطوة 1 من 4", "wl.step2": "الخطوة 2 من 4", "wl.step3": "الخطوة 3 من 4", "wl.step4": "الخطوة 4 من 4", "wl.hint": "مرّر لتطوي علبتك",
   "wl.j.eyebrow": "فكرتك، خطوة بخطوة",
   "wl.j.title": "من فكرتك إلى مصنعنا",
   "wl.j.intro": "جرّب فكرتك على علبة: نكهة واسم وشكل. ثم أخبرنا عنها. أربع محطات، ولا التزام.",
@@ -203,7 +203,7 @@ const T = {
   "wl.sum.brand": "العلامة",
   "wl.sum.flavor": "النكهة",
   "wl.sum.look": "الشكل",
-  "wl.drag": "اسحب لتدوير العلبة",
+  "wl.drag": "اسحب لتدوير العلبة، أو استخدم الأسهم", "wl.turnl": "تدوير العلبة لليسار", "wl.turnr": "تدوير العلبة لليمين",
   "wl.shelf": "تشكيلتك على الرف",
   "wl.default": "زست!",
   "wl.c.eyebrow": "تصورات التغليف",
@@ -291,7 +291,7 @@ const BI = (k, cls = '') => `<i class="e-en ${cls}" data-k="${k}"></i><i class="
 const COMPASS = '<svg class="a-compass" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="34"/><circle cx="50" cy="50" r="6"/><path d="M50 2v96M2 50h96M16 16l68 68M84 16L16 84"/><path d="M50 8l5 42-5 42-5-42z"/></svg>';
 const SPRIG = '<svg class="a-sprig __S__" viewBox="0 0 30 80"><path d="M15 78C15 56 14 30 15 4"/><path d="M15 66c-8-2-12-8-12-14 8 1 12 6 12 14zM15 52c-8-2-12-8-12-14 8 1 12 6 12 14zM15 38c-8-2-12-8-12-14 8 1 12 6 12 14zM15 24c-7-2-10-7-10-12 7 1 10 5 10 12z"/><path d="M15 62c8-2 12-8 12-14-8 1-12 6-12 14zM15 48c8-2 12-8 12-14-8 1-12 6-12 14zM15 34c8-2 12-8 12-14-8 1-12 6-12 14zM15 20c7-2 10-7 10-12-7 1-10 5-10 12z"/></svg>';
 function cartonHTML(f, style) {
-  return `<div class="bx" data-f="${f}" data-style="${style}" style="--p:1">
+  return `<div class="bx" data-f="${f}" data-style="${style}" style="--p:1" aria-hidden="true">
   <div class="fc fr"><div class="art">
     <span class="a-bg"></span><span class="a-grid"></span><span class="a-tab"></span>${COMPASS}
     <span class="a-frame"></span><span class="a-band"></span><span class="a-rib"></span><span class="a-ring"></span>
@@ -348,6 +348,8 @@ function renderChoices() {
   $('#wlLookD').textContent = t(`wl.c.${state.style}.p`);
   const ul = $('#wlLookT'); ul.textContent = '';
   t(`wl.c.${state.style}.t`).split('|').forEach((s) => { const li = document.createElement('li'); li.textContent = s; ul.appendChild(li); });
+  $('.wl-main-wrap').setAttribute('aria-label', lang === 'ar' ? `عبوتك: ${state.name}، ${t(`f.${state.f}.name`)}، شكل ${t(`wl.c.${state.style}.n`)}` : `Your pack: ${state.name}, ${t(`f.${state.f}.name`)}, ${t(`wl.c.${state.style}.n`)} look`);
+  $('.wl-shelf').setAttribute('aria-label', lang === 'ar' ? `علامتك على النكهات الأربع: ${FL.map((f) => t(`f.${f}.name`)).join('، ')}` : `Your brand on all four flavors: ${FL.map((f) => t(`f.${f}.name`)).join(', ')}`);
   $('#sumBrand').textContent = state.name; $('#sumFlavor').textContent = t(`f.${state.f}.name`); $('#sumLook').textContent = t(`wl.c.${state.style}.n`);
   wl.dataset.f = state.f;
   const fb = $('#fBrand'); if (fb && !fb.dataset.edited) fb.value = state.touched ? state.name : '';
@@ -395,18 +397,28 @@ function renderYaw() {
   const base = -28 + Math.sin(prog * 9) * 9 * fold;
   mainBx.style.setProperty('--yaw', `${(base + userYaw + spinDeg).toFixed(2)}deg`);
 }
-const stage = $('#wlStage'); let dragging = false, dragX = 0, relaxRaf = 0;
+const stage = $('#wlStage'); let dragging = false, dragX = 0, relaxRaf = 0, yawVel = 0;
+const SGN = () => (root.dir === 'rtl' ? -1 : 1);
+// the box stays where it is let go: a little momentum, then it rests there
+const glideYaw = () => { userYaw += yawVel; yawVel *= 0.88; renderYaw(); if (Math.abs(yawVel) > 0.05) relaxRaf = requestAnimationFrame(glideYaw); };
 stage.addEventListener('pointerdown', (e) => {
   if (wl.dataset.step === '0' || wl.dataset.step === '4' || e.target.closest('button,a,input')) return;
-  dragging = true; dragX = e.clientX; stage.classList.add('drag'); stage.setPointerCapture(e.pointerId); cancelAnimationFrame(relaxRaf);
+  dragging = true; dragX = e.clientX; yawVel = 0; stage.classList.add('drag'); stage.setPointerCapture(e.pointerId); cancelAnimationFrame(relaxRaf);
 });
-stage.addEventListener('pointermove', (e) => { if (!dragging) return; userYaw += (e.clientX - dragX) * 0.55 * (root.dir === 'rtl' ? -1 : 1); dragX = e.clientX; renderYaw(); });
+stage.addEventListener('pointermove', (e) => { if (!dragging) return; const d = (e.clientX - dragX) * 0.55 * SGN(); userYaw += d; yawVel = d * 0.4; dragX = e.clientX; renderYaw(); });
 const endDrag = () => {
   if (!dragging) return; dragging = false; stage.classList.remove('drag');
-  const ease2 = () => { userYaw *= 0.93; renderYaw(); if (Math.abs(userYaw) > 0.3) relaxRaf = requestAnimationFrame(ease2); else { userYaw = 0; renderYaw(); } };
-  relaxRaf = requestAnimationFrame(ease2);
+  if (!reduce.matches) relaxRaf = requestAnimationFrame(glideYaw);
 };
 stage.addEventListener('pointerup', endDrag); stage.addEventListener('pointercancel', endDrag);
+// the same turn, for the keyboard and for anyone who prefers a button
+$$('.wl-turn button').forEach((b) => b.addEventListener('click', () => {
+  cancelAnimationFrame(relaxRaf); yawVel = 0;
+  const from = userYaw, to = userYaw + (+b.dataset.t) * 40 * SGN(), t0 = performance.now();
+  if (reduce.matches) { userYaw = to; renderYaw(); return; }
+  const step = (now) => { const k = clamp((now - t0) / 380); userYaw = from + (to - from) * (1 - Math.pow(1 - k, 3)); renderYaw(); if (k < 1) relaxRaf = requestAnimationFrame(step); };
+  relaxRaf = requestAnimationFrame(step);
+}));
 
 /* ───────────── Layout cache and the scroll frame ───────────── */
 const L = new Map();

@@ -31,8 +31,8 @@ const T = {
     'f.vegetables.desc': 'A fresh and vibrant flavor inspired by the goodness of vegetables.',
     'f.chicken.desc': 'A warm and familiar flavor crafted for everyday enjoyment.',
     'f.beef.desc': 'A richer and bolder flavor created for a deeper, more satisfying taste experience.',
-    'house.cta': 'More about the company', 'coll.all': 'Explore every flavor', 'made.cta': 'Manufacturing & quality', 'coll.eyebrow': 'Flavor range', 'coll.title': 'Four Flavors. One Distinctive Noodle Experience.',
-    'coll.sub': 'The range moves from mild and versatile to rich and savory, giving consumers clear choices without changing the brand’s signature built-in flavor concept.', 'coll.view': 'View on stage',
+    'house.cta': 'More about the company', 'coll.all': 'Explore every flavor', 'made.cta': 'Manufacturing & quality', 'made.mapalt': 'An illustrated map of Saudi Arabia with routes reaching out to stores and cities', 'label.altz': 'Example of your own brand on the pack: Zest!,', 'coll.eyebrow': 'Flavor range', 'coll.title': 'Four Flavors. One Distinctive Noodle Experience.',
+    'coll.sub': 'The range moves from mild and versatile to rich and savory, giving consumers clear choices without changing the brand’s signature built-in flavor concept.', 'coll.view': 'See the flavor',
     'house.eyebrow': 'Company overview', 'house.title': 'About New Bright',
     'house.sub': 'Al Rammah International Holding is a Saudi-owned group established in 1979 and headquartered in Al Khobar, Eastern Province.',
     'house.n1.t': 'Al Rammah International Holding', 'house.n1.p': 'Its business approach is built around diversification, innovation, operational excellence and long-term value creation.', 'house.n1.tag': 'Established',
@@ -61,13 +61,13 @@ const T = {
     'label.p': 'One noodle range. Many ways to make it your own.',
     'label.s1': 'Four Flavor Varieties', 'label.s2': 'Flexible commercial support', 'label.s3': 'Contact Us',
     'label.seg': 'Brand', 'label.nb': 'New Bright', 'label.yours': 'Your brand', 'label.cta': 'Start your white label',
-    'label.note': 'Concept illustration. The second brand is invented. Drag to turn.',
+    'label.note': 'Concept illustration. The second brand is invented. Drag to turn, or use the arrows.', 'turn.l': 'Turn the carton left', 'turn.r': 'Turn the carton right', 'turn.g': 'The carton: drag, or use the left and right arrow keys, to turn it', 'rail.jump': 'Jump to', 'rail.top': 'the top',
     'part.eyebrow': 'Partnerships', 'part.title': 'Partnership Focus', 'part.intro': 'Collaboration with distributors, retailers and foodservice businesses that help extend market reach and maintain reliable product availability.', 'part.hint': 'Keep scrolling', 'part.pager': 'Partnership types',
     'part.1.k': 'Partnership focus', 'part.2.k': 'Partnership focus', 'part.3.k': 'Partnership focus',
     'part.1.t': 'Distributors', 'part.1.p': 'Reliable availability is an important part of New Bright’s growth strategy.', 'part.1.c1': 'Consistent product supply', 'part.1.c2': 'Efficient order fulfillment', 'part.1.c3': 'Reliable stock availability',
     'part.2.t': 'Retailers', 'part.2.p': 'Making the range increasingly accessible to consumers while building visibility across retail.', 'part.2.c1': 'Strengthening retail presence', 'part.2.c2': 'Building stronger brand visibility', 'part.2.c3': 'Stronger point-of-sale visibility',
     'part.3.t': 'Foodservice', 'part.3.p': 'New Bright’s built-in flavor creates a ready foundation, while the final meal remains open to individual taste.', 'part.3.c1': 'Foodservice business opportunities', 'part.3.c2': 'Flexible commercial support', 'part.3.c3': 'Long-term business relationships',
-    'close.eyebrow': 'Contact Us', 'close.title': 'Flavor in every strand', 'close.sub': 'Four Flavors. One Distinctive Noodle Experience', 'close.cta2': 'Flavor range',
+    'close.eyebrow': 'Contact Us', 'close.title': 'Ready to partner with us?', 'close.sub': 'Tell us about your business: retail, distribution, foodservice or your own brand.', 'close.cta2': 'Flavor range',
     'c.phone': 'Phone', 'c.email': 'Email', 'c.address': 'Address', 'c.addr': 'Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia',
     'foot.say': 'Flavor in every strand', 'foot.explore': 'Explore', 'foot.business': 'Contact Us', 'foot.flavors': 'The four flavors', 'foot.top': 'Back to top',
     'foot.fine': 'Design concept. Content from the New Bright Company Profile and Brand Guideline (2026).',
@@ -91,8 +91,8 @@ const T = {
     'f.vegetables.desc': 'نكهة منعشة ونابضة بالحياة مستوحاة من خير الخضار.',
     'f.chicken.desc': 'نكهة دافئة ومألوفة صُنعت للاستمتاع اليومي.',
     'f.beef.desc': 'نكهة أغنى وأجرأ لتجربة طعم أعمق وأكثر إشباعًا.',
-    'house.cta': 'المزيد عن الشركة', 'coll.all': 'استكشف كل النكهات', 'made.cta': 'التصنيع والجودة', 'coll.eyebrow': 'تشكيلة النكهات', 'coll.title': 'أربع نكهات. تجربة نودلز واحدة مميزة.',
-    'coll.sub': 'تتدرّج التشكيلة من الخفيف متعدد الاستخدامات إلى الغني الشهي، فتمنح المستهلك خيارات واضحة دون أن تتغيّر فكرة العلامة: النكهة داخل النودلز.', 'coll.view': 'شاهدها على المسرح',
+    'house.cta': 'المزيد عن الشركة', 'coll.all': 'استكشف كل النكهات', 'made.cta': 'التصنيع والجودة', 'made.mapalt': 'خريطة مرسومة للمملكة العربية السعودية تمتد منها مسارات إلى المتاجر والمدن', 'label.altz': 'مثال لعلامتك الخاصة على العبوة: زست!،', 'coll.eyebrow': 'تشكيلة النكهات', 'coll.title': 'أربع نكهات. تجربة نودلز واحدة مميزة.',
+    'coll.sub': 'تتدرّج التشكيلة من الخفيف متعدد الاستخدامات إلى الغني الشهي، فتمنح المستهلك خيارات واضحة دون أن تتغيّر فكرة العلامة: النكهة داخل النودلز.', 'coll.view': 'شاهد النكهة',
     'house.eyebrow': 'نبذة عن الشركة', 'house.title': 'عن نيو برايت',
     'house.sub': 'مجموعة الرماح الدولية القابضة مجموعة سعودية الملكية تأسست عام 1979 ومقرها الخبر في المنطقة الشرقية.',
     'house.n1.t': 'مجموعة الرماح الدولية القابضة', 'house.n1.p': 'يقوم نهجها في الأعمال على التنويع والابتكار والتميّز التشغيلي وصناعة قيمة طويلة الأمد.', 'house.n1.tag': 'التأسيس',
@@ -121,13 +121,13 @@ const T = {
     'label.p': 'تشكيلة نودلز واحدة. طرق كثيرة لتجعلها خاصة بك.',
     'label.s1': 'أربع نكهات', 'label.s2': 'دعم تجاري مرن', 'label.s3': 'تواصل معنا',
     'label.seg': 'العلامة', 'label.nb': 'نيو برايت', 'label.yours': 'علامتك', 'label.cta': 'ابدأ علامتك الخاصة',
-    'label.note': 'رسم توضيحي. العلامة الأخرى مُختلَقة. اسحب لتدويرها.',
+    'label.note': 'رسم توضيحي. العلامة الأخرى مُختلَقة. اسحب لتدويرها أو استخدم الأسهم.', 'turn.l': 'تدوير العلبة لليسار', 'turn.r': 'تدوير العلبة لليمين', 'turn.g': 'العلبة: اسحب، أو استخدم مفتاحَي السهم الأيسر والأيمن، لتدويرها', 'rail.jump': 'انتقل إلى', 'rail.top': 'أعلى الصفحة',
     'part.eyebrow': 'الشراكات', 'part.title': 'محور الشراكات', 'part.intro': 'تعاون مع الموزّعين وتجار التجزئة وقطاع خدمات الطعام يوسّع الوصول إلى السوق ويحافظ على توفّر المنتج بثبات.', 'part.hint': 'واصل التمرير', 'part.pager': 'أنواع الشراكات',
     'part.1.k': 'محور الشراكات', 'part.2.k': 'محور الشراكات', 'part.3.k': 'محور الشراكات',
     'part.1.t': 'الموزّعون', 'part.1.p': 'التوفّر الموثوق جزء مهم من استراتيجية نمو نيو برايت.', 'part.1.c1': 'توريد منتجات متسق', 'part.1.c2': 'تنفيذ طلبات بكفاءة', 'part.1.c3': 'توفّر موثوق للمخزون',
     'part.2.t': 'تجار التجزئة', 'part.2.p': 'جعل التشكيلة أكثر إتاحة للمستهلكين مع بناء حضور في قنوات التجزئة.', 'part.2.c1': 'تعزيز الحضور في التجزئة', 'part.2.c2': 'بناء ظهور أقوى للعلامة', 'part.2.c3': 'ظهور أقوى عند نقطة البيع',
     'part.3.t': 'خدمات الطعام', 'part.3.p': 'النكهة المدمجة في نيو برايت أساس جاهز، ويبقى الطبق النهائي مفتوحًا للذوق الفردي.', 'part.3.c1': 'فرص مع قطاع خدمات الطعام', 'part.3.c2': 'دعم تجاري مرن', 'part.3.c3': 'علاقات عمل طويلة الأمد',
-    'close.eyebrow': 'تواصل معنا', 'close.title': 'نكهة في كل خصلة', 'close.sub': 'أربع نكهات. تجربة نودلز واحدة مميزة', 'close.cta2': 'تشكيلة النكهات',
+    'close.eyebrow': 'تواصل معنا', 'close.title': 'جاهزون للشراكة معك؟', 'close.sub': 'أخبرنا عن منشأتك: تجزئة أو توزيع أو خدمات طعام أو علامتك الخاصة.', 'close.cta2': 'تشكيلة النكهات',
     'c.phone': 'الهاتف', 'c.email': 'البريد الإلكتروني', 'c.address': 'العنوان', 'c.addr': 'مجمع الموسى، مبنى C، طريق الملك فيصل، الخبر، المنطقة الشرقية، ص.ب 2269، المملكة العربية السعودية',
     'foot.say': 'نكهة في كل خصلة', 'foot.explore': 'استكشف', 'foot.business': 'تواصل معنا', 'foot.flavors': 'النكهات الأربع', 'foot.top': 'للأعلى',
     'foot.fine': 'فكرة تصميم. المحتوى من الملف التعريفي ودليل الهوية لنيو برايت (2026).',
@@ -154,11 +154,16 @@ function buildManifesto() {
   measure();
 }
 
+const RAIL_KEYS = ['rail.top', 'ch.intro', 'coll.eyebrow', 'ch.idea', 'ch.made', 'ch.label', 'ch.partners', 'close.eyebrow'];
+function railNames() {
+  $$('#rail a').forEach((a, i) => { const txt = `${t('rail.jump')} ${t(RAIL_KEYS[i])}`; a.dataset.tip = txt; a.setAttribute('aria-label', `${String(i + 1).padStart(2, '0')}. ${txt}`); });
+}
 function applyLang(next) {
   lang = next;
   root.lang = lang; root.dir = lang === 'ar' ? 'rtl' : 'ltr';
   $$('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
   $$('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
+  railNames();
   $$('[data-i18n-alt]').forEach((el) => { el.alt = t(el.dataset.i18nAlt); });
   $('#langTxt').textContent = lang === 'ar' ? 'EN' : 'العربية';
   $('#langBtn').setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
@@ -243,11 +248,6 @@ if (fine.matches && !reduce.matches) {
   hero.addEventListener('pointerleave', () => { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
 }
 
-// "See it on stage" links from the collection
-$$('.stage-link, .ft-flavor').forEach((a) => a.addEventListener('click', () => {
-  const f = a.dataset.f;
-  setTimeout(() => selectFlavor(f), 450);
-}));
 
 /* ───────────── Collection: the shelf ───────────── */
 const panels = $$('.panel');
@@ -274,7 +274,8 @@ const frontSrc = (b, f) => `assets/pack3d/${b}-${f}-front${b === 'zest' ? '-' + 
 ['plain', 'vegetables', 'chicken', 'beef'].forEach((f) => ['nb', 'zest'].forEach((b) => { new Image().src = frontSrc(b, f); new Image().src = `assets/pack3d/${b}-${f}-spine.webp`; }));
 
 function skin() {
-  $('#imgFront').src = frontSrc(brand, cf);
+  const imgF = $('#imgFront'); imgF.src = frontSrc(brand, cf);
+  imgF.alt = brand === 'zest' ? `${t('label.altz')} ${t(`f.${cf}.name`)}` : t(`f.${cf}.alt`);
   $('#imgSpine').src = `assets/pack3d/${brand}-${cf}-spine.webp`;
   cartonEl.dataset.brand = brand;
   cartonEl.style.setProperty('--spine', SPINE[cf]);
@@ -310,19 +311,30 @@ $$('#cartonFlavors button').forEach((b) => b.addEventListener('click', () => {
 }));
 skin();
 
-let dragX = 0, decay = 0;
-stage3d.addEventListener('pointerdown', (e) => { if (e.target.closest('button,a')) return; dragging = true; dragX = e.clientX; stage3d.classList.add('drag'); stage3d.setPointerCapture(e.pointerId); cancelAnimationFrame(decay); });
-stage3d.addEventListener('pointermove', (e) => { if (!dragging) return; userRy += (e.clientX - dragX) * 0.5; dragX = e.clientX; paintCarton(); });
+let dragX = 0, decay = 0, vel = 0;
+// the carton stays where it is let go: it keeps a little momentum and then rests there
+const glide = () => { userRy += vel; vel *= 0.88; paintCarton(); if (Math.abs(vel) > 0.05) decay = requestAnimationFrame(glide); };
+stage3d.addEventListener('pointerdown', (e) => { if (e.target.closest('button,a')) return; dragging = true; dragX = e.clientX; vel = 0; stage3d.classList.add('drag'); stage3d.setPointerCapture(e.pointerId); cancelAnimationFrame(decay); });
+stage3d.addEventListener('pointermove', (e) => { if (!dragging) return; const d = (e.clientX - dragX) * 0.5; userRy += d; vel = d * 0.4; dragX = e.clientX; paintCarton(); });
 const endDrag = () => {
   if (!dragging) return; dragging = false; stage3d.classList.remove('drag');
-  const ease = () => { userRy *= 0.94; paintCarton(); if (Math.abs(userRy) > 0.2) decay = requestAnimationFrame(ease); else { userRy = 0; paintCarton(); } };
-  decay = requestAnimationFrame(ease);
+  if (reduce.matches) return;
+  decay = requestAnimationFrame(glide);
 };
 stage3d.addEventListener('pointerup', endDrag); stage3d.addEventListener('pointercancel', endDrag);
 stage3d.tabIndex = 0;
 stage3d.setAttribute('role', 'img'); stage3d.setAttribute('aria-label', 'Carton. Use the left and right arrow keys to turn');
+let nudgeFrom = 0, nudgeRaf = 0;
+function nudge(d) {
+  cancelAnimationFrame(decay); cancelAnimationFrame(nudgeRaf); vel = 0;
+  const from = userRy, to = userRy + d, t0 = performance.now();
+  if (reduce.matches) { userRy = to; paintCarton(); return; }
+  const step = (now) => { const k = clamp((now - t0) / 380), e = 1 - Math.pow(1 - k, 3); userRy = from + (to - from) * e; paintCarton(); if (k < 1) nudgeRaf = requestAnimationFrame(step); };
+  nudgeRaf = requestAnimationFrame(step);
+}
+$('#turnL').addEventListener('click', () => nudge(-40)); $('#turnR').addEventListener('click', () => nudge(40));
 stage3d.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { userRy += e.key === 'ArrowLeft' ? -18 : 18; paintCarton(); e.preventDefault(); clearTimeout(stage3d._t); stage3d._t = setTimeout(() => { const ease = () => { userRy *= 0.9; paintCarton(); if (Math.abs(userRy) > 0.2) decay = requestAnimationFrame(ease); }; ease(); }, 1200); }
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { nudge(e.key === 'ArrowLeft' ? -30 : 30); e.preventDefault(); }
 });
 
 function paintCarton() {

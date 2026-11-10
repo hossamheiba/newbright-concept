@@ -10,7 +10,7 @@
 <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/cairo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.classList.add('js');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nb-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=31">
+<link rel="stylesheet" href="styles.css?v=36">
 <link rel="stylesheet" href="company.css?v=21">
 </head>
 <body data-hdr="light">
@@ -286,7 +286,7 @@
     <h2 id="coPtT" data-reveal style="--i:1" data-i18n="co.pt.title"></h2>
     <p class="co-p lt" data-reveal style="--i:2" data-i18n="co.pt.p"></p>
   </div>
-  <div class="co-marq" aria-hidden="true"><div class="co-marq-track" data-marq="co.pt.b"></div></div>
+  <div class="co-marq"><div class="co-marq-track" aria-hidden="true" data-marq="co.pt.b"></div></div>
   <ul class="sr" data-list="co.pt.b"></ul>
   <div class="co-wi-wrap">
     <p class="co-wi-k" data-i18n="co.pt.ways"></p>
@@ -307,11 +307,6 @@
       <a class="btn btn-cream" href="mailto:newbright@alrammah.com.sa?subject=New%20Bright%20-%20Request%20a%20quote"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-line light" href="flavors.html" data-i18n="close.cta2">Flavor range</a>
     </div>
-    <dl class="close-contact" data-reveal style="--i:4">
-      <div><dt data-i18n="c.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
-      <div><dt data-i18n="c.email">Email</dt><dd><a href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a></dd></div>
-      <div><dt data-i18n="c.address">Address</dt><dd data-i18n="c.addr">Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia</dd></div>
-    </dl>
   </div>
   <div class="row-packs" id="rowPacks" aria-hidden="true">
     <img src="assets/packs/plain.webp" alt="" loading="lazy" style="--i:0">
@@ -327,7 +322,6 @@
   <div class="ft-top">
     <div class="ft-brand">
       <a class="ft-logo" href="index.html" aria-label="New Bright"><img src="assets/brand/logo.svg" alt="New Bright" width="591" height="105"></a>
-      <p class="ft-say" data-i18n="foot.say">Flavor in every strand</p>
       <p class="ft-meta"><span data-i18n="menu.tag">Chinese Noodles · Pancit Canton</span><br><span data-i18n="made.by">Al Rammah Factory, Al Khobar</span></p>
     </div>
     <nav class="ft-nav" aria-label="Footer">
@@ -343,8 +337,11 @@
     <div class="ft-biz">
       <p class="ft-h" data-i18n="foot.business">Contact Us</p>
       <a class="btn btn-cream" href="contact.html?path=trade#help" data-path="trade"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="ft-link ft-tel" href="tel:+966557287799" dir="ltr">+966 55 728 7799</a>
-      <a class="ft-link ft-tel" href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a>
+      <dl class="ft-contact">
+        <div><dt data-nav="foot.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
+        <div><dt data-nav="foot.email">Email</dt><dd><a href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a></dd></div>
+        <div><dt data-nav="foot.address">Address</dt><dd data-nav="foot.addr">Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia</dd></div>
+      </dl>
       <a class="ft-link" href="company.html#partners"><span data-i18n="hero.cta2">Partnerships</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
@@ -361,8 +358,8 @@
   </div>
 </footer>
 
-<script src="nav.js?v=1"></script>
+<script src="nav.js?v=3"></script>
 <script src="assets/vendor/lenis.min.js"></script>
-<script src="company.js?v=14"></script>
+<script src="company.js?v=15"></script>
 </body>
 </html>

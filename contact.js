@@ -72,6 +72,27 @@ const T = {
   "ct.w.p": "Your brand, our noodles. We make Asian-style noodles in Saudi Arabia, and we can make them for you, under your name.",
   "ct.w.go": "Try it on a box",
   "ct.w.start": "Start your white label",
+  "cq.title": "Request a quote",
+  "cq.business": "Your business",
+  "cq.company": "Business name",
+  "cq.type": "Type of business",
+  "cq.choose": "Choose a type",
+  "cq.types": "Supermarket or hypermarket|Grocery or convenience store|Distributor or wholesaler|Restaurant, café or hotel|Online store|Import and export|Something else",
+  "cq.order": "Your order",
+  "cq.flavors": "Which flavors?",
+  "cq.qty": "Approximate monthly quantity",
+  "cq.qtys": "Not decided yet|Under 50 cartons|50 to 200 cartons|200 to 1,000 cartons|Over 1,000 cartons",
+  "cq.person": "How to reach you",
+  "cq.notes": "Anything else we should know?",
+  "cq.submit": "Request a quote",
+  "cq.err.company": "Please enter the business name.",
+  "cq.err.type": "Please choose a type of business.",
+  "cq.prev.t": "Your request was not sent",
+  "cq.prev.b": "This form is a preview: the site does not receive requests yet. Your details are still in the form, and you can reach us on the numbers above.",
+  "cq.next.t": "What happens next",
+  "cq.next.1": "You send the form, with the flavors and the quantity you have in mind.",
+  "cq.next.2": "We contact you by phone or email to confirm the details.",
+  "cq.next.3": "We prepare the quote for you.",
   "cf.title": "Send us a message",
   "cf.note": "Fields marked (required) must be filled in.",
   "cf.req": "(required)",
@@ -177,6 +198,27 @@ const T = {
   "ct.w.p": "علامتك، ونودلزنا. نصنع النودلز ذات الطابع الآسيوي في المملكة العربية السعودية، ويمكننا صنعها لك باسم علامتك.",
   "ct.w.go": "جرّبها على علبة",
   "ct.w.start": "ابدأ علامتك الخاصة",
+  "cq.title": "اطلب عرض سعر",
+  "cq.business": "عن المنشأة",
+  "cq.company": "اسم المنشأة",
+  "cq.type": "نوع النشاط",
+  "cq.choose": "اختر نوع النشاط",
+  "cq.types": "سوبرماركت أو هايبرماركت|بقالة أو تموينات|موزّع أو تاجر جملة|مطعم أو مقهى أو فندق|متجر إلكتروني|استيراد وتصدير|نشاط آخر",
+  "cq.order": "طلبك",
+  "cq.flavors": "أي نكهات؟",
+  "cq.qty": "الكمية الشهرية التقريبية",
+  "cq.qtys": "لم أحدد بعد|أقل من 50 كرتونًا|من 50 إلى 200 كرتون|من 200 إلى 1,000 كرتون|أكثر من 1,000 كرتون",
+  "cq.person": "طريقة التواصل",
+  "cq.notes": "هل هناك شيء آخر نعرفه؟",
+  "cq.submit": "اطلب عرض سعر",
+  "cq.err.company": "اكتب اسم المنشأة.",
+  "cq.err.type": "اختر نوع النشاط.",
+  "cq.prev.t": "لم يُرسَل طلبك",
+  "cq.prev.b": "هذا النموذج في مرحلة المعاينة: استقبال الطلبات من الموقع لم يُفعَّل بعد. بياناتك ما زالت في الحقول، ويمكنك التواصل معنا على الأرقام أعلاه.",
+  "cq.next.t": "ماذا يحدث بعد ذلك",
+  "cq.next.1": "ترسل النموذج مع النكهات والكمية التي تفكر فيها.",
+  "cq.next.2": "نتواصل معك هاتفيًا أو بالبريد لتأكيد التفاصيل.",
+  "cq.next.3": "نجهّز لك عرض السعر.",
   "cf.title": "أرسل لنا رسالة",
   "cf.note": "الحقول المعلَّمة بـ(مطلوب) يلزم تعبئتها.",
   "cf.req": "(مطلوب)",
@@ -401,6 +443,39 @@ form.addEventListener('submit', (e) => {
 });
 form.addEventListener('input', (e) => { const f = e.target.closest('.cf-f.bad'); if (f) validate(); });
 
+/* ───────────── The quote form (the business path) ───────────── */
+const qform = $('#cqForm');
+function fillOptions(sel, key, first) {
+  const cur = sel.value; sel.textContent = '';
+  if (first) { const o = document.createElement('option'); o.value = ''; o.textContent = first; sel.appendChild(o); }
+  t(key).split('|').forEach((s, i) => { const o = document.createElement('option'); o.value = String(i); o.textContent = s; sel.appendChild(o); });
+  if (cur !== '') sel.value = cur;
+}
+function qValidate() {
+  const v = (n) => qform.elements[n].value.trim();
+  const errs = {};
+  if (!v('company')) errs.company = true;
+  if (!v('type')) errs.type = true;
+  if (!v('name')) errs.name = true;
+  const ph = digits(v('phone'));
+  if (!ph) errs.phone = 'cf.err.phone'; else if (!/^\d{8,15}$/.test(ph)) errs.phone = 'cf.err.phoneBad';
+  if (v('email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) errs.email = true;
+  $$('.cf-f[data-fld]', qform).forEach((f) => { const bad = !!errs[f.dataset.fld]; f.classList.toggle('bad', bad); $('input,select', f).setAttribute('aria-invalid', String(bad)); });
+  if (errs.phone) $('#cqPhoneErr').textContent = t(errs.phone);
+  const bad = Object.keys(errs);
+  $('#cqFix').classList.toggle('on', bad.length > 0);
+  return bad;
+}
+qform.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const bad = qValidate();
+  $('#cqPrev').classList.toggle('on', bad.length === 0);
+  if (bad.length) $('input,select', $(`.cf-f[data-fld="${bad[0]}"]`, qform)).focus();
+  else $('#cqPrev').scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'center' });
+});
+qform.addEventListener('input', (e) => { if (e.target.closest('.cf-f.bad')) qValidate(); });
+qform.addEventListener('change', (e) => { if (e.target.closest('.cf-f.bad')) qValidate(); });
+
 /* ───────────── Head office ───────────── */
 const labelLines = $('#ctLabelLines');
 function addrParts() { return t('c.addr').split(/\s*[,،]\s*/).filter(Boolean); }
@@ -452,7 +527,8 @@ function applyLang(next) {
   $$('.ct-copy').forEach((b) => b.setAttribute('aria-label', `${t('ct.copy')} ${t(b.closest('.ct-row').querySelector('.ct-lab b').dataset.i18n)}`));
   splitTitles(); paintAddress(); buildNets(); counter();
   fillSelect($('#cTopic'), 'cf.topics');
-  $('#ctQuote').href = `mailto:newbright@alrammah.com.sa?subject=${encodeURIComponent(t('ct.t.mail'))}`;
+  fillOptions($('#cqType'), 'cq.types', t('cq.choose')); fillOptions($('#cqQty'), 'cq.qtys');
+  if (qform.querySelector('.cf-f.bad')) qValidate();
   if (form.querySelector('.cf-f.bad')) validate();
   $('#langTxt').textContent = lang === 'ar' ? 'EN' : 'العربية';
   $('#langBtn').setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');

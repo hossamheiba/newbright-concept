@@ -12,7 +12,7 @@
 <link rel="preload" href="assets/packs/plain.webp" as="image">
 <script>document.documentElement.classList.add('js');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nb-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
 <script>(function(){var d=document.documentElement;try{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;var n=performance.getEntriesByType&&performance.getEntriesByType('navigation')[0];var internal=n&&n.type==='navigate'&&document.referrer&&new URL(document.referrer).origin===location.origin;var back=n&&n.type==='back_forward';if(!rm&&!internal&&!back)d.classList.add('nbi-on')}catch(e){d.classList.add('nbi-on')}})()</script>
-<link rel="stylesheet" href="styles.css?v=31">
+<link rel="stylesheet" href="styles.css?v=36">
 </head>
 <body data-hdr="light">
 <div class="nbi" id="nbIntro">
@@ -168,7 +168,7 @@
       <span class="tag" data-i18n="house.n2.tag">The factory</span>
     </li>
     <li class="node n3" data-reveal style="--i:2">
-      <img class="node-pack" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy">
+      <img class="node-pack" role="presentation" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy">
       <span class="yr" data-i18n="house.n3.yr">Today</span>
       <h3 data-i18n="house.n3.t">New Bright</h3>
       <p data-i18n="house.n3.p">Chinese Noodles · Pancit Canton, built around one idea: the flavor is part of the noodle itself.</p>
@@ -177,12 +177,12 @@
   </ol>
 
   <ul class="facts">
-    <li data-reveal style="--i:0"><b data-i18n="fact.1.v">2021</b><span data-i18n="fact.1.l">Local manufacturing</span></li>
-    <li data-reveal style="--i:1"><b data-i18n="fact.2.v">Saudi Arabia</b><span data-i18n="fact.2.l">Made in</span></li>
-    <li data-reveal style="--i:2"><b data-i18n="fact.3.v">Al Khobar</b><span data-i18n="fact.3.l">Eastern Province</span></li>
-    <li data-reveal style="--i:3"><b data-i18n="fact.4.v">4</b><span data-i18n="fact.4.l">Flavor varieties</span></li>
-    <li data-reveal style="--i:4"><b>200<small>g</small></b><span data-i18n="fact.5.l">Net pack</span></li>
-    <li data-reveal style="--i:5"><b data-i18n="fact.6.v">GMO-free</b><span data-i18n="fact.6.l">As stated on the pack</span></li>
+    <li data-reveal style="--i:0"><span data-i18n="fact.1.l">Local manufacturing</span><b data-i18n="fact.1.v">2021</b></li>
+    <li data-reveal style="--i:1"><span data-i18n="fact.2.l">Made in</span><b data-i18n="fact.2.v">Saudi Arabia</b></li>
+    <li data-reveal style="--i:2"><span data-i18n="fact.3.l">Eastern Province</span><b data-i18n="fact.3.v">Al Khobar</b></li>
+    <li data-reveal style="--i:3"><span data-i18n="fact.4.l">Flavor varieties</span><b data-i18n="fact.4.v">4</b></li>
+    <li data-reveal style="--i:4"><span data-i18n="fact.5.l">Net pack</span><b>200<small>g</small></b></li>
+    <li data-reveal style="--i:5"><span data-i18n="fact.6.l">As stated on the pack</span><b data-i18n="fact.6.v">GMO-free</b></li>
   </ul>
   <div class="more-row" data-reveal><a class="btn btn-fill" href="company.html"><span data-i18n="house.cta">More about the company</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 
@@ -213,29 +213,29 @@
       <button class="panel-hit" type="button" aria-expanded="true"><span class="sr" data-i18n="f.plain.name">Plain</span></button>
       <span class="num">01</span>
       <span class="vname" aria-hidden="true"><span data-i18n="f.plain.name">Plain</span></span>
-      <div class="info"><h3 data-i18n="f.plain.name">Plain</h3><p data-i18n="f.plain.desc"></p><a class="stage-link" href="#top" data-f="plain"><span data-i18n="coll.view">See it on stage</span><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></div>
-      <img class="pic" src="assets/packs/plain.webp" width="1820" height="1809" alt="" loading="lazy">
+      <div class="info"><h3 data-i18n="f.plain.name">Plain</h3><p data-i18n="f.plain.desc"></p><a class="stage-link" href="flavors.html#plain" data-f="plain"><span data-i18n="coll.view">See the flavor</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <img class="pic" data-i18n-alt="f.plain.alt" src="assets/packs/plain.webp" width="1820" height="1809" alt="" loading="lazy">
     </article>
     <article class="panel" data-f="vegetables" style="--c:var(--green);--on:var(--cream);--pat:url(assets/patterns/maze.svg);--pat-s:cover">
       <button class="panel-hit" type="button" aria-expanded="false"><span class="sr" data-i18n="f.vegetables.name">Vegetables</span></button>
       <span class="num">02</span>
       <span class="vname" aria-hidden="true"><span data-i18n="f.vegetables.name">Vegetables</span></span>
-      <div class="info"><h3 data-i18n="f.vegetables.name">Vegetables</h3><p data-i18n="f.vegetables.desc"></p><a class="stage-link" href="#top" data-f="vegetables"><span data-i18n="coll.view">See it on stage</span><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></div>
-      <img class="pic" src="assets/packs/vegetables.webp" width="1820" height="1809" alt="" loading="lazy">
+      <div class="info"><h3 data-i18n="f.vegetables.name">Vegetables</h3><p data-i18n="f.vegetables.desc"></p><a class="stage-link" href="flavors.html#vegetables" data-f="vegetables"><span data-i18n="coll.view">See the flavor</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <img class="pic" data-i18n-alt="f.vegetables.alt" src="assets/packs/vegetables.webp" width="1820" height="1809" alt="" loading="lazy">
     </article>
     <article class="panel" data-f="chicken" style="--c:var(--orange);--on:var(--burg);--pat:url(assets/patterns/squiggle.svg);--pat-s:900px auto">
       <button class="panel-hit" type="button" aria-expanded="false"><span class="sr" data-i18n="f.chicken.name">Chicken</span></button>
       <span class="num">03</span>
       <span class="vname" aria-hidden="true"><span data-i18n="f.chicken.name">Chicken</span></span>
-      <div class="info"><h3 data-i18n="f.chicken.name">Chicken</h3><p data-i18n="f.chicken.desc"></p><a class="stage-link" href="#top" data-f="chicken"><span data-i18n="coll.view">See it on stage</span><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></div>
-      <img class="pic" src="assets/packs/chicken.webp" width="1820" height="1809" alt="" loading="lazy">
+      <div class="info"><h3 data-i18n="f.chicken.name">Chicken</h3><p data-i18n="f.chicken.desc"></p><a class="stage-link" href="flavors.html#chicken" data-f="chicken"><span data-i18n="coll.view">See the flavor</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <img class="pic" data-i18n-alt="f.chicken.alt" src="assets/packs/chicken.webp" width="1820" height="1809" alt="" loading="lazy">
     </article>
     <article class="panel" data-f="beef" style="--c:var(--spice);--on:var(--cream);--pat:url(assets/patterns/weave.svg);--pat-s:700px auto">
       <button class="panel-hit" type="button" aria-expanded="false"><span class="sr" data-i18n="f.beef.name">Beef</span></button>
       <span class="num">04</span>
       <span class="vname" aria-hidden="true"><span data-i18n="f.beef.name">Beef</span></span>
-      <div class="info"><h3 data-i18n="f.beef.name">Beef</h3><p data-i18n="f.beef.desc"></p><a class="stage-link" href="#top" data-f="beef"><span data-i18n="coll.view">See it on stage</span><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></div>
-      <img class="pic" src="assets/packs/beef.webp" width="1820" height="1809" alt="" loading="lazy">
+      <div class="info"><h3 data-i18n="f.beef.name">Beef</h3><p data-i18n="f.beef.desc"></p><a class="stage-link" href="flavors.html#beef" data-f="beef"><span data-i18n="coll.view">See the flavor</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <img class="pic" data-i18n-alt="f.beef.alt" src="assets/packs/beef.webp" width="1820" height="1809" alt="" loading="lazy">
     </article>
   </div>
   <div class="more-row" data-reveal><a class="btn btn-fill" href="flavors.html"><span data-i18n="coll.all">Explore every flavor</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
@@ -298,7 +298,7 @@
       <div class="more-row" data-reveal><a class="btn btn-cream" href="company.html#make"><span data-i18n="made.cta">Manufacturing &amp; quality</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div>
     <figure class="map" data-reveal="map">
-      <img src="assets/food/saudi-map.webp" width="1217" height="1113" alt="" loading="lazy">
+      <img data-i18n-alt="made.mapalt" src="assets/food/saudi-map.webp" width="1217" height="1113" alt="" loading="lazy">
       <figcaption data-i18n="made.cap">Starting in the Eastern Province, growing outward. Illustrative.</figcaption>
     </figure>
   </div>
@@ -331,13 +331,13 @@
       <a class="btn btn-fill dark" href="whitelabel.html#enquiry" data-reveal style="--i:5"><span data-i18n="label.cta">Start a white-label enquiry</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
-    <div class="stage3d" id="stage3d">
+    <div class="stage3d" id="stage3d" tabindex="0" role="group" data-i18n-aria="turn.g" aria-label="">
       <div class="halo" aria-hidden="true"></div>
       <div class="carton-user" id="cartonUser">
         <div class="carton-spin" id="cartonSpin">
           <div class="carton" id="carton" data-brand="nb">
-            <div class="face f-front"><img id="imgFront" src="assets/pack3d/nb-plain-front.webp" width="1300" height="1503" alt=""></div>
-            <div class="face f-left"><img id="imgSpine" src="assets/pack3d/nb-plain-spine.webp" width="205" height="1503" alt=""></div>
+            <div class="face f-front"><img id="imgFront" src="assets/pack3d/nb-plain-front.webp" width="1300" height="1503" alt="" loading="lazy" decoding="async"></div>
+            <div class="face f-left"><img id="imgSpine" src="assets/pack3d/nb-plain-spine.webp" width="205" height="1503" alt="" loading="lazy" decoding="async"></div>
             <div class="face f-right"></div>
             <div class="face f-back"></div>
             <div class="face f-top"></div>
@@ -346,6 +346,7 @@
         </div>
       </div>
       <span class="floor-shadow" aria-hidden="true"></span>
+      <div class="turn-ctl"><button type="button" id="turnL" data-i18n-aria="turn.l"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" id="turnR" data-i18n-aria="turn.r"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
       <p class="stage-note"><span data-i18n="label.note">Concept illustration. The second brand is invented. Drag to turn.</span></p>
     </div>
   </div>
@@ -433,11 +434,6 @@
       <a class="btn btn-cream" href="mailto:newbright@alrammah.com.sa?subject=New%20Bright%20-%20Request%20a%20quote"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-line light" href="flavors.html" data-i18n="close.cta2">Flavor range</a>
     </div>
-    <dl class="close-contact" data-reveal style="--i:4">
-      <div><dt data-i18n="c.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
-      <div><dt data-i18n="c.email">Email</dt><dd><a href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a></dd></div>
-      <div><dt data-i18n="c.address">Address</dt><dd data-i18n="c.addr">Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia</dd></div>
-    </dl>
   </div>
   <div class="row-packs" id="rowPacks" aria-hidden="true">
     <img src="assets/packs/plain.webp" alt="" loading="lazy" style="--i:0">
@@ -453,7 +449,6 @@
   <div class="ft-top">
     <div class="ft-brand">
       <a class="ft-logo" href="#top" aria-label="New Bright"><img src="assets/brand/logo.svg" alt="New Bright" width="591" height="105"></a>
-      <p class="ft-say" data-i18n="foot.say">Flavor in every strand</p>
       <p class="ft-meta"><span data-i18n="menu.tag">Chinese Noodles · Pancit Canton</span><br><span data-i18n="made.by">Al Rammah Factory, Al Khobar</span></p>
     </div>
     <nav class="ft-nav" aria-label="Footer">
@@ -469,8 +464,11 @@
     <div class="ft-biz">
       <p class="ft-h" data-i18n="foot.business">Contact Us</p>
       <a class="btn btn-cream" href="contact.html?path=trade#help" data-path="trade"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="ft-link ft-tel" href="tel:+966557287799" dir="ltr">+966 55 728 7799</a>
-      <a class="ft-link ft-tel" href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a>
+      <dl class="ft-contact">
+        <div><dt data-nav="foot.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
+        <div><dt data-nav="foot.email">Email</dt><dd><a href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a></dd></div>
+        <div><dt data-nav="foot.address">Address</dt><dd data-nav="foot.addr">Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia</dd></div>
+      </dl>
       <a class="ft-link" href="company.html#partners"><span data-i18n="hero.cta2">Partnerships</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
@@ -488,8 +486,8 @@
 </footer>
 
 <script src="intro.js?v=1"></script>
-<script src="nav.js?v=1"></script>
+<script src="nav.js?v=3"></script>
 <script src="assets/vendor/lenis.min.js"></script>
-<script src="app.js?v=22"></script>
+<script src="app.js?v=25"></script>
 </body>
 </html>

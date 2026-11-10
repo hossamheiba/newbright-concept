@@ -11,7 +11,7 @@
 <link rel="preload" href="assets/fonts/cairo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/packs/plain.webp" as="image">
 <script>document.documentElement.classList.add('js');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nb-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=31">
+<link rel="stylesheet" href="styles.css?v=36">
 <link rel="stylesheet" href="flavors.css?v=13">
 </head>
 <body data-hdr="light">
@@ -213,7 +213,7 @@
   </div>
   <div class="fs-card" id="fsCard" data-f="plain" aria-live="polite">
     <div class="fs-info">
-      <p class="fs-n" id="fsN">01</p>
+      <p class="fs-n" id="fsN" aria-hidden="true">01</p>
       <h3 class="fs-name" id="fsName">Plain</h3>
       <p class="fs-mood" id="fsMood"></p>
       <dl>
@@ -247,7 +247,7 @@
       <button type="button" id="fwNext" data-i18n-aria="fw.next" aria-label="Next"><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
   </div>
-  <ol class="fw-track" id="fwTrack" tabindex="0" aria-label="Everyday versatility"><li class="fw-card"><span class="fw-n">01</span><div class="fw-plate"><img src="assets/food/dish-plain.webp" alt="" loading="lazy"></div><p data-i18n="fw.1"></p></li><li class="fw-card"><span class="fw-n">02</span><div class="fw-plate"><img src="assets/food/dish-vegetables.webp" alt="" loading="lazy"></div><p data-i18n="fw.3"></p></li><li class="fw-card"><span class="fw-n">03</span><div class="fw-plate"><img src="assets/food/dish-chicken.webp" alt="" loading="lazy"></div><p data-i18n="fw.4"></p></li><li class="fw-card"><span class="fw-n">04</span><div class="fw-plate"><img src="assets/food/dish-beef.webp" alt="" loading="lazy"></div><p data-i18n="fw.5"></p></li></ol>
+  <ol class="fw-track" id="fwTrack" tabindex="0" aria-label="Everyday versatility"><li class="fw-card"><span class="fw-n">01</span><div class="fw-plate"><img src="assets/food/dish-plain.webp" alt="" data-i18n-alt="fw.d1.alt" loading="lazy"></div><p data-i18n="fw.1"></p></li><li class="fw-card"><span class="fw-n">02</span><div class="fw-plate"><img src="assets/food/dish-vegetables.webp" alt="" data-i18n-alt="fw.d2.alt" loading="lazy"></div><p data-i18n="fw.3"></p></li><li class="fw-card"><span class="fw-n">03</span><div class="fw-plate"><img src="assets/food/dish-chicken.webp" alt="" data-i18n-alt="fw.d3.alt" loading="lazy"></div><p data-i18n="fw.4"></p></li><li class="fw-card"><span class="fw-n">04</span><div class="fw-plate"><img src="assets/food/dish-beef.webp" alt="" data-i18n-alt="fw.d4.alt" loading="lazy"></div><p data-i18n="fw.5"></p></li></ol>
   <div class="fw-bar" aria-hidden="true"><i><u id="fwBar"></u></i></div>
   <p class="fw-end" data-reveal data-i18n="fw.end">One noodle range. Many ways to make it your own.</p>
 </section>
@@ -263,11 +263,6 @@
       <a class="btn btn-cream" href="mailto:newbright@alrammah.com.sa?subject=New%20Bright%20-%20Request%20a%20quote"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-line light" href="#top" data-i18n="close.cta2">Flavor range</a>
     </div>
-    <dl class="close-contact" data-reveal style="--i:4">
-      <div><dt data-i18n="c.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
-      <div><dt data-i18n="c.email">Email</dt><dd><a href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a></dd></div>
-      <div><dt data-i18n="c.address">Address</dt><dd data-i18n="c.addr">Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia</dd></div>
-    </dl>
   </div>
   <div class="row-packs" id="rowPacks" aria-hidden="true">
     <img src="assets/packs/plain.webp" alt="" loading="lazy" style="--i:0">
@@ -283,7 +278,6 @@
   <div class="ft-top">
     <div class="ft-brand">
       <a class="ft-logo" href="index.html" aria-label="New Bright"><img src="assets/brand/logo.svg" alt="New Bright" width="591" height="105"></a>
-      <p class="ft-say" data-i18n="foot.say">Flavor in every strand</p>
       <p class="ft-meta"><span data-i18n="menu.tag">Chinese Noodles · Pancit Canton</span><br><span data-i18n="made.by">Al Rammah Factory, Al Khobar</span></p>
     </div>
     <nav class="ft-nav" aria-label="Footer">
@@ -299,8 +293,11 @@
     <div class="ft-biz">
       <p class="ft-h" data-i18n="foot.business">Contact Us</p>
       <a class="btn btn-cream" href="contact.html?path=trade#help" data-path="trade"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="ft-link ft-tel" href="tel:+966557287799" dir="ltr">+966 55 728 7799</a>
-      <a class="ft-link ft-tel" href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a>
+      <dl class="ft-contact">
+        <div><dt data-nav="foot.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
+        <div><dt data-nav="foot.email">Email</dt><dd><a href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a></dd></div>
+        <div><dt data-nav="foot.address">Address</dt><dd data-nav="foot.addr">Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia</dd></div>
+      </dl>
       <a class="ft-link" href="company.html#partners"><span data-i18n="hero.cta2">Partnerships</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
@@ -317,8 +314,8 @@
   </div>
 </footer>
 
-<script src="nav.js?v=1"></script>
+<script src="nav.js?v=3"></script>
 <script src="assets/vendor/lenis.min.js"></script>
-<script src="flavors.js?v=5"></script>
+<script src="flavors.js?v=6"></script>
 </body>
 </html>

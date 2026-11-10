@@ -31,7 +31,17 @@ It shows on a fresh visit and on every refresh. It does not replay when a visito
 - The language (`?lang=ar` or the language button) is remembered across pages.
 - The footer repeats the pages, the four flavors (each goes to its chapter on the Flavors page) and the contact details.
 
+## Accessibility and the company's review (Nov 2026)
+
+- The moving strips (Company, Contact) have a pause/play button; the box on White label and the 3D pack on Home have turn buttons and arrow-key control; pictures carry descriptions in both languages; the section rail on Home names each stop on hover and focus.
+- The tagline is said once, in the Home hero. The closing band on every page asks "Ready to partner with us?"; the footer carries the logo and the two lines only.
+- Home's range panels end in **See the flavor**, which opens that flavor's chapter on the Flavors page.
+- The footer on every page carries the phone, email and head-office address (one list, translated in `nav.js`); no page repeats them above it.
+- The 3D boxes (Home and White label) keep the angle where they are let go, and show every side (no blend modes on the box: Chrome stops drawing a 3D box whose front turns away when a face uses one).
+- The Home's facts (2021 · Saudi Arabia · Al Khobar …) are a spec card: label above value.
+- Contact → business path holds a real quote form (business, order, person) with a "what happens next" list.
+
 ## Not wired yet
 
-The two forms (Contact message, White label enquiry) check their fields and show a preview message; **nothing is sent**. Where messages go is the Dashboard's job, in a later phase.
+The three forms (Contact message, Contact quote request, White label enquiry) check their fields and show a preview message; **nothing is sent**. Where messages go is the Dashboard's job, in a later phase.
 The pages are marked `noindex` (a concept, not the live site).

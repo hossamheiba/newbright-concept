@@ -23,7 +23,7 @@
 .bk{left:100%;top:0;width:var(--w);height:100%;transform-origin:0 50%;transform:rotateY(calc(var(--p)*90deg))}
 .tp{bottom:100%;left:0;width:100%;height:var(--d);transform-origin:50% 100%;transform:rotateX(calc(var(--p)*90deg));background:var(--tp)}
 .bt{top:100%;left:0;width:100%;height:var(--d);transform-origin:50% 0;transform:rotateX(calc(var(--p)*-90deg));background:var(--tp)}
-.lf::after{opacity:calc(var(--p)*.34)}.rt::after{opacity:calc(var(--p)*.2)}.bk::after{opacity:calc(var(--p)*.4)}.tp::after{background:#fff;opacity:calc(var(--p)*.1)}.bt::after{opacity:calc(var(--p)*.5)}
+.lf::after{opacity:calc(var(--p)*.34)}.rt::after{opacity:calc(var(--p)*.2)}.bk::after{opacity:calc(var(--p)*.08)}.tp::after{background:#fff;opacity:calc(var(--p)*.1)}.bt::after{opacity:calc(var(--p)*.5)}
 .bx .sp{position:absolute;inset:0;display:grid;place-items:center;container-type:size}
 .bx .sp b{writing-mode:vertical-rl;font-weight:900;white-space:nowrap;font-size:min(86cqw,calc(86cqh / var(--n,6) * 1.5));color:var(--fg);letter-spacing:.08em}
 .bx[data-style=harvest] .sp b{font-family:Georgia,serif;font-style:italic}
@@ -50,7 +50,7 @@
 .bx[data-style=atlas] .bki{padding-inline-start:14cqw}
 
 /* every pack: paper edge, print sheen */
-.art::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;background:linear-gradient(112deg,transparent 38%,rgb(255 255 255/.13) 47%,transparent 56%),linear-gradient(180deg,rgb(255 255 255/.05),transparent 22%,transparent 80%,rgb(0 0 0/.14));mix-blend-mode:soft-light}
+.art::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;background:linear-gradient(112deg,transparent 38%,rgb(255 255 255/.13) 47%,transparent 56%),linear-gradient(180deg,rgb(255 255 255/.05),transparent 22%,transparent 80%,rgb(0 0 0/.14));}
 .art::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;box-shadow:inset 0 0 0 .25cqw rgb(255 255 255/.12),inset 0 -1.6cqw 2.4cqw rgb(0 0 0/.18)}
 
 /* the printed front: shared pieces */
@@ -113,7 +113,7 @@
 
 /* ── Harvest Bowl: kraft paper, stitched ribbon, a plated dish in a stamped ring ── */
 .bx[data-style=harvest] .art{background:radial-gradient(120% 90% at 30% 15%,#d9b784,#c49a5e 65%,#b58847),repeating-linear-gradient(97deg,rgb(90 55 20/.05) 0 .3cqw,transparent .3cqw 1.1cqw)}
-.bx[data-style=harvest] .a-bg{display:block;inset:0;background:radial-gradient(rgb(90 55 20/.14) 1px,transparent 1.5px) 0 0/2.4cqw 2.4cqw,radial-gradient(rgb(255 255 255/.16) 1px,transparent 1.5px) 1.2cqw 1.2cqw/3.1cqw 3.1cqw;mix-blend-mode:multiply;opacity:.55}
+.bx[data-style=harvest] .a-bg{display:block;inset:0;background:radial-gradient(rgb(90 55 20/.14) 1px,transparent 1.5px) 0 0/2.4cqw 2.4cqw,radial-gradient(rgb(255 255 255/.16) 1px,transparent 1.5px) 1.2cqw 1.2cqw/3.1cqw 3.1cqw;opacity:.55}
 .bx[data-style=harvest] .a-rib{display:block;inset-inline:-3cqw;top:10cqw;height:21cqw;background:#f5e8d1;box-shadow:0 1.4cqw 0 rgb(0 0 0/.16),0 2.4cqw 3cqw rgb(60 30 10/.3);clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%)}
 .bx[data-style=harvest] .a-rib::after{content:"";position:absolute;inset:1.6cqw 6.5cqw;border:.3cqw dashed rgb(138 90 43/.7);border-radius:.4cqw}
 .bx[data-style=harvest] .a-name{top:10cqw;height:21cqw;display:grid;place-items:center}
@@ -379,3 +379,9 @@
 
 /* Arabic flavor name on the Zest pack: solid, not outlined (outlined Arabic breaks where the letters join) */
 [lang=ar] .bx[data-style=zest] .a-flav{-webkit-text-stroke:0;color:#fff}
+
+/* turn buttons live where the drag hint is, for the same steps */
+.wl-turn{inset-block-end:9.5%;opacity:0;pointer-events:none;transition:opacity .5s}
+.wl[data-step="1"] .wl-turn,.wl[data-step="2"] .wl-turn,.wl[data-step="3"] .wl-turn{opacity:1}
+.wl[data-step="1"] .wl-turn button,.wl[data-step="2"] .wl-turn button,.wl[data-step="3"] .wl-turn button{pointer-events:auto}
+.wl-turn button{pointer-events:none}

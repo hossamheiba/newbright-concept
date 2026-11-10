@@ -43,7 +43,7 @@ const T = {
     'fw.title': 'Everyday Versatility', 'fw.lead': 'New Bright is designed to work as more than a fixed noodle recipe. Its built-in flavor creates a ready foundation, while the final meal remains open to individual taste.',
     'fw.1': 'Enjoy it as a simple noodle dish.', 'fw.2': 'Pair it with a favorite sauce.', 'fw.3': 'Add fresh or cooked vegetables.', 'fw.4': 'Add chicken, beef, seafood or another preferred protein.', 'fw.5': 'Finish with herbs, spices or toppings.', 'fw.6': 'Use the plain variety for original recipes.',
     'fw.end': 'One noodle range. Many ways to make it your own.', 'fw.prev': 'Previous', 'fw.next': 'Next',
-    'close.eyebrow': 'Contact Us', 'close.title': 'Flavor in every strand', 'close.sub': 'Four Flavors. One Distinctive Noodle Experience', 'close.cta2': 'Flavor range',
+    'fw.d1.alt': 'A bowl of golden noodles with chopsticks', 'fw.d2.alt': 'A bowl of green noodles with shrimp, greens and a crisp topping', 'fw.d3.alt': 'A bowl of noodles with sliced chicken, broccoli and carrot', 'fw.d4.alt': 'A bowl of noodles with beef, red chili and broccoli', 'close.eyebrow': 'Contact Us', 'close.title': 'Ready to partner with us?', 'close.sub': 'Tell us about your business: retail, distribution, foodservice or your own brand.', 'close.cta2': 'Flavor range',
     'c.phone': 'Phone', 'c.email': 'Email', 'c.address': 'Address', 'c.addr': 'Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia',
     'foot.say': 'Flavor in every strand', 'foot.explore': 'Explore', 'foot.business': 'Contact Us', 'foot.flavors': 'The four flavors', 'foot.top': 'Back to top',
     'foot.fine': 'Design concept. Content from the New Bright Company Profile and Brand Guideline (2026).',
@@ -83,7 +83,7 @@ const T = {
     'fw.title': 'تنوّع الاستخدام', 'fw.lead': 'صُممت نيو برايت لتكون أكثر من وصفة نودلز ثابتة: نكهتها المدمجة أساس جاهز، ويبقى الطبق النهائي مفتوحًا للذوق الفردي.',
     'fw.1': 'استمتع بها كطبق نودلز بسيط.', 'fw.2': 'قدّمها مع صلصتك المفضلة.', 'fw.3': 'أضف خضارًا طازجة أو مطبوخة.', 'fw.4': 'أضف دجاجًا أو لحمًا أو مأكولات بحرية أو أي بروتين تفضّله.', 'fw.5': 'أنهِها بالأعشاب أو التوابل أو الإضافات.', 'fw.6': 'استخدم النكهة السادة للوصفات الأصلية.',
     'fw.end': 'تشكيلة نودلز واحدة. طرق كثيرة لتجعلها خاصة بك.', 'fw.prev': 'السابق', 'fw.next': 'التالي',
-    'close.eyebrow': 'تواصل معنا', 'close.title': 'نكهة في كل خصلة', 'close.sub': 'أربع نكهات. تجربة نودلز واحدة مميزة', 'close.cta2': 'تشكيلة النكهات',
+    'fw.d1.alt': 'وعاء نودلز ذهبية مع عيدان الأكل', 'fw.d2.alt': 'وعاء نودلز خضراء مع روبيان وخضار وإضافة مقرمشة', 'fw.d3.alt': 'وعاء نودلز مع شرائح دجاج وبروكلي وجزر', 'fw.d4.alt': 'وعاء نودلز باللحم والفلفل الأحمر والبروكلي', 'close.eyebrow': 'تواصل معنا', 'close.title': 'جاهزون للشراكة معك؟', 'close.sub': 'أخبرنا عن منشأتك: تجزئة أو توزيع أو خدمات طعام أو علامتك الخاصة.', 'close.cta2': 'تشكيلة النكهات',
     'c.phone': 'الهاتف', 'c.email': 'البريد الإلكتروني', 'c.address': 'العنوان', 'c.addr': 'مجمع الموسى، مبنى C، طريق الملك فيصل، الخبر، المنطقة الشرقية، ص.ب 2269، المملكة العربية السعودية',
     'foot.say': 'نكهة في كل خصلة', 'foot.explore': 'استكشف', 'foot.business': 'تواصل معنا', 'foot.flavors': 'النكهات الأربع', 'foot.top': 'للأعلى',
     'foot.fine': 'فكرة تصميم. المحتوى من الملف التعريفي ودليل الهوية لنيو برايت (2026).',
@@ -107,6 +107,7 @@ function applyLang(next) {
   lang = next; root.lang = lang; root.dir = lang === 'ar' ? 'rtl' : 'ltr';
   $$('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
   $$('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
+  $$('[data-i18n-alt]').forEach((el) => { el.alt = t(el.dataset.i18nAlt); });
   fillLists();
   $('#langTxt').textContent = lang === 'ar' ? 'EN' : 'العربية';
   $('#langBtn').setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');

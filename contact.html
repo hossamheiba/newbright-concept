@@ -10,8 +10,8 @@
 <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/cairo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.classList.add('js');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nb-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=31">
-<link rel="stylesheet" href="contact.css?v=5">
+<link rel="stylesheet" href="styles.css?v=36">
+<link rel="stylesheet" href="contact.css?v=6">
 </head>
 <body data-hdr="dark">
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
@@ -147,7 +147,26 @@
           <li><a href="mailto:newbright@alrammah.com.sa"><i><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i><small data-i18n="ct.ch.email"></small><b dir="ltr">newbright@alrammah.com.sa</b></a></li>
           <li><a href="https://wa.me/966557287799" target="_blank" rel="noopener noreferrer"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5z"/><path d="M9 8.5c.3 2.6 2.9 5.2 5.9 6.1l1.3-1.4-2-1.2-1 .7a5 5 0 0 1-2.4-2.4l.7-1-1.2-2z"/></svg></i><small data-i18n="ct.ch.wa"></small><b dir="ltr">+966 55 728 7799</b></a></li>
         </ul>
-        <a class="btn btn-fill dark" id="ctQuote" href="mailto:newbright@alrammah.com.sa"><span data-i18n="ct.t.quote"></span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <form class="cf cq" id="cqForm" novalidate>
+          <h4 class="cq-t" data-i18n="cq.title"></h4>
+          <p class="cf-hint" data-i18n="cf.note"></p>
+          <h5 class="cq-g" data-i18n="cq.business"></h5>
+          <div class="cf-f" data-fld="company"><label for="cqCompany"><span data-i18n="cq.company"></span><small data-i18n="cf.req"></small></label><input id="cqCompany" name="company" autocomplete="organization"><span class="cf-err" data-i18n="cq.err.company"></span></div>
+          <div class="cf-f" data-fld="type"><label for="cqType"><span data-i18n="cq.type"></span><small data-i18n="cf.req"></small></label><select id="cqType" name="type"></select><span class="cf-err" data-i18n="cq.err.type"></span></div>
+          <h5 class="cq-g" data-i18n="cq.order"></h5>
+          <div class="cf-f"><span class="lb"><span data-i18n="cq.flavors"></span><small data-i18n="cf.opt"></small></span><div class="cf-chips" id="cqFlavors"><label><input type="checkbox" name="flavors" value="plain"><i style="--c:var(--yellow)"></i><span data-i18n="f.plain.name"></span></label><label><input type="checkbox" name="flavors" value="vegetables"><i style="--c:var(--green)"></i><span data-i18n="f.vegetables.name"></span></label><label><input type="checkbox" name="flavors" value="chicken"><i style="--c:var(--orange)"></i><span data-i18n="f.chicken.name"></span></label><label><input type="checkbox" name="flavors" value="beef"><i style="--c:var(--spice)"></i><span data-i18n="f.beef.name"></span></label></div><span class="cf-hint" data-i18n="cf.flavorsHint"></span></div>
+          <div class="cf-f"><label for="cqQty"><span data-i18n="cq.qty"></span><small data-i18n="cf.opt"></small></label><select id="cqQty" name="quantity"></select></div>
+          <h5 class="cq-g" data-i18n="cq.person"></h5>
+          <div class="cf-row">
+            <div class="cf-f" data-fld="name"><label for="cqName"><span data-i18n="cf.name"></span><small data-i18n="cf.req"></small></label><input id="cqName" name="name" autocomplete="name"><span class="cf-err" data-i18n="cf.err.name"></span></div>
+            <div class="cf-f" data-fld="phone"><label for="cqPhone"><span data-i18n="cf.phone"></span><small data-i18n="cf.req"></small></label><input id="cqPhone" name="phone" type="tel" inputmode="tel" dir="ltr" autocomplete="tel"><span class="cf-hint" data-i18n="cf.phoneHint"></span><span class="cf-err" id="cqPhoneErr"></span></div>
+          </div>
+          <div class="cf-f" data-fld="email"><label for="cqEmail"><span data-i18n="cf.email"></span><small data-i18n="cf.opt"></small></label><input id="cqEmail" name="email" type="email" dir="ltr" autocomplete="email"><span class="cf-err" data-i18n="cf.err.email"></span></div>
+          <div class="cf-f"><label for="cqNotes"><span data-i18n="cq.notes"></span><small data-i18n="cf.opt"></small></label><textarea id="cqNotes" name="notes" maxlength="1000" rows="3"></textarea></div>
+          <div class="cf-submit"><button class="btn btn-fill dark" type="submit"><span data-i18n="cq.submit"></span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><p class="cf-fix" id="cqFix" role="alert" data-i18n="cf.fix"></p></div>
+          <div class="cf-prev" id="cqPrev" role="status"><h4 data-i18n="cq.prev.t"></h4><p data-i18n="cq.prev.b"></p></div>
+          <div class="cq-next"><h5 data-i18n="cq.next.t"></h5><ol><li data-i18n="cq.next.1"></li><li data-i18n="cq.next.2"></li><li data-i18n="cq.next.3"></li></ol></div>
+        </form>
       </section>
       <section class="ct-pn" id="pn3" data-pn="3" aria-labelledby="pn3t" hidden>
         <div class="ct-packs" aria-hidden="true"><img src="assets/packs/plain.webp" alt="" width="1820" height="1809" style="--k:0"><img src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" style="--k:1"><img src="assets/packs/chicken.webp" alt="" width="1820" height="1809" style="--k:2"><img src="assets/packs/beef.webp" alt="" width="1820" height="1809" style="--k:3"></div>
@@ -182,7 +201,7 @@
 </section>
 
 <section class="ct-follow" id="follow" data-ch="3" data-hdr="dark" data-label="ct.nav.follow" aria-labelledby="ctFollowT">
-  <div class="ct-marq" aria-hidden="true"><div class="ct-marq-t"><span>@NewBrightKSA</span><span>@NewBrightKSA</span><span>@NewBrightKSA</span><span>@NewBrightKSA</span></div></div>
+  <div class="ct-marq"><div class="ct-marq-t" aria-hidden="true"><span>@NewBrightKSA</span><span>@NewBrightKSA</span><span>@NewBrightKSA</span><span>@NewBrightKSA</span></div></div>
   <div class="ct-follow-in">
     <div><p class="eyebrow" data-reveal><i class="dot"></i><span data-i18n="ct.f.eyebrow"></span></p><h2 id="ctFollowT" data-reveal style="--i:1" data-i18n="ct.f.title"></h2></div>
     <ul class="ct-nets" id="ctNets" data-reveal style="--i:2"></ul>
@@ -195,7 +214,6 @@
   <div class="ft-top">
     <div class="ft-brand">
       <a class="ft-logo" href="index.html" aria-label="New Bright"><img src="assets/brand/logo.svg" alt="New Bright" width="591" height="105"></a>
-      <p class="ft-say" data-i18n="foot.say">Flavor in every strand</p>
       <p class="ft-meta"><span data-i18n="menu.tag">Chinese Noodles · Pancit Canton</span><br><span data-i18n="made.by">Al Rammah Factory, Al Khobar</span></p>
     </div>
     <nav class="ft-nav" aria-label="Footer">
@@ -211,8 +229,11 @@
     <div class="ft-biz">
       <p class="ft-h" data-i18n="foot.business">Contact Us</p>
       <a class="btn btn-cream" href="contact.html?path=trade#help" data-path="trade"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="ft-link ft-tel" href="tel:+966557287799" dir="ltr">+966 55 728 7799</a>
-      <a class="ft-link ft-tel" href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a>
+      <dl class="ft-contact">
+        <div><dt data-nav="foot.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
+        <div><dt data-nav="foot.email">Email</dt><dd><a href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a></dd></div>
+        <div><dt data-nav="foot.address">Address</dt><dd data-nav="foot.addr">Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia</dd></div>
+      </dl>
       <a class="ft-link" href="company.html#partners"><span data-i18n="hero.cta2">Partnerships</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
@@ -229,9 +250,9 @@
   </div>
 </footer>
 
-<script src="nav.js?v=1"></script>
+<script src="nav.js?v=3"></script>
 <script src="assets/vendor/lenis.min.js"></script>
-<script src="contact.js?v=5"></script>
-<script src="select.js?v=1"></script>
+<script src="contact.js?v=6"></script>
+<script src="select.js?v=2"></script>
 </body>
 </html>

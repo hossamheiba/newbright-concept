@@ -10,8 +10,8 @@
 <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/cairo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.classList.add('js');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nb-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=31">
-<link rel="stylesheet" href="whitelabel.css?v=14">
+<link rel="stylesheet" href="styles.css?v=36">
+<link rel="stylesheet" href="whitelabel.css?v=18">
 </head>
 <body data-hdr="light">
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
@@ -74,21 +74,21 @@
         <p class="wl-hint"><i><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></i><span data-i18n="wl.hint"></span></p>
       </div>
       <div class="wl-step" data-i="1">
-        <p class="eyebrow dark"><i class="dot"></i><span dir="ltr">01 / 04</span></p>
+        <p class="eyebrow dark"><i class="dot"></i><span dir="ltr" role="img" data-i18n-aria="wl.step1" aria-label="">01 / 04</span></p>
         <h2 data-i18n="wl.s1.t"></h2>
         <p class="wl-lead" data-i18n="wl.s1.p"></p>
         <p class="wl-lbl" data-i18n="wl.fl.label"></p>
         <div class="wl-flav" id="wlFlav" role="radiogroup" data-i18n-aria="wl.fl.label" aria-label="Choose the flavor"><button type="button" role="radio" aria-checked="true" data-f="plain" style="--c:var(--yellow)"><i></i><span data-i18n="f.plain.name"></span></button><button type="button" role="radio" aria-checked="false" data-f="vegetables" style="--c:var(--green)"><i></i><span data-i18n="f.vegetables.name"></span></button><button type="button" role="radio" aria-checked="false" data-f="chicken" style="--c:var(--orange)"><i></i><span data-i18n="f.chicken.name"></span></button><button type="button" role="radio" aria-checked="false" data-f="beef" style="--c:var(--spice)"><i></i><span data-i18n="f.beef.name"></span></button></div>
       </div>
       <div class="wl-step" data-i="2">
-        <p class="eyebrow dark"><i class="dot"></i><span dir="ltr">02 / 04</span></p>
+        <p class="eyebrow dark"><i class="dot"></i><span dir="ltr" role="img" data-i18n-aria="wl.step2" aria-label="">02 / 04</span></p>
         <h2 data-i18n="wl.s2.t"></h2>
         <p class="wl-lead" data-i18n="wl.s2.p"></p>
         <label class="wl-lbl" for="wlName" data-i18n="wl.nm.label"></label>
         <input class="wl-name" id="wlName" type="text" maxlength="16" autocomplete="off" spellcheck="false" data-i18n-ph="wl.nm.ph" placeholder="Type your brand name">
       </div>
       <div class="wl-step" data-i="3">
-        <p class="eyebrow dark"><i class="dot"></i><span dir="ltr">03 / 04</span></p>
+        <p class="eyebrow dark"><i class="dot"></i><span dir="ltr" role="img" data-i18n-aria="wl.step3" aria-label="">03 / 04</span></p>
         <h2 data-i18n="wl.s3.t"></h2>
         <p class="wl-lead" data-i18n="wl.s3.p"></p>
         <div class="wl-looks" id="wlLooks" role="radiogroup" data-i18n-aria="wl.st.label" aria-label="Choose a look"><button type="button" role="radio" aria-checked="false" data-style="nova"><b data-i18n="wl.c.nova.n"></b><span data-i18n="wl.c.nova.d"></span></button><button type="button" role="radio" aria-checked="true" data-style="zest"><b data-i18n="wl.c.zest.n"></b><span data-i18n="wl.c.zest.d"></span></button><button type="button" role="radio" aria-checked="false" data-style="harvest"><b data-i18n="wl.c.harvest.n"></b><span data-i18n="wl.c.harvest.d"></span></button><button type="button" role="radio" aria-checked="false" data-style="atlas"><b data-i18n="wl.c.atlas.n"></b><span data-i18n="wl.c.atlas.d"></span></button></div>
@@ -96,7 +96,7 @@
         <ul class="wl-look-t" id="wlLookT"></ul>
       </div>
       <div class="wl-step" data-i="4">
-        <p class="eyebrow"><i class="dot"></i><span dir="ltr">04 / 04</span></p>
+        <p class="eyebrow"><i class="dot"></i><span dir="ltr" role="img" data-i18n-aria="wl.step4" aria-label="">04 / 04</span></p>
         <h2 data-i18n="wl.c.title"></h2>
         <p class="wl-lead" data-i18n="wl.s4.p"></p>
         <ul class="wl-sum" aria-live="polite">
@@ -119,13 +119,14 @@
       <span class="wl-plinth" aria-hidden="true"></span>
       </span>
       <div class="wl-floor" id="wlFloor" aria-hidden="true"></div>
-      <div class="wl-main-wrap wl-sc" aria-hidden="true"><div class="wl-sc" id="wlSc"><div class="wl-main" id="wlMain"></div></div></div>
-      <div class="wl-shelf" aria-hidden="true">
+      <div class="wl-main-wrap wl-sc" role="img" aria-label=""><div class="wl-sc" id="wlSc"><div class="wl-main" id="wlMain"></div></div></div>
+      <div class="wl-shelf" role="img" aria-label="">
         <p class="wl-shelf-lbl" data-i18n="wl.shelf"></p>
         <span class="wl-plank"></span>
         <div class="wl-row" id="wlRow"></div>
       </div>
       <p class="wl-drag" data-i18n="wl.drag"></p>
+      <div class="turn-ctl wl-turn"><button type="button" data-t="-1" data-i18n-aria="wl.turnl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" data-t="1" data-i18n-aria="wl.turnr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
     </div>
     <div class="wl-tabs" role="tablist" data-i18n-aria="wl.tabs" aria-label="Steps"><button type="button" role="tab" aria-selected="true" data-go="0"><b>01</b><span data-i18n="wl.tab.0"></span></button><button type="button" role="tab" aria-selected="false" data-go="1"><b>02</b><span data-i18n="wl.tab.1"></span></button><button type="button" role="tab" aria-selected="false" data-go="2"><b>03</b><span data-i18n="wl.tab.2"></span></button><button type="button" role="tab" aria-selected="false" data-go="3"><b>04</b><span data-i18n="wl.tab.3"></span></button><button type="button" role="tab" aria-selected="false" data-go="4"><b>05</b><span data-i18n="wl.tab.4"></span></button></div>
   </div>
@@ -231,7 +232,6 @@
   <div class="ft-top">
     <div class="ft-brand">
       <a class="ft-logo" href="index.html" aria-label="New Bright"><img src="assets/brand/logo.svg" alt="New Bright" width="591" height="105"></a>
-      <p class="ft-say" data-i18n="foot.say">Flavor in every strand</p>
       <p class="ft-meta"><span data-i18n="menu.tag">Chinese Noodles · Pancit Canton</span><br><span data-i18n="made.by">Al Rammah Factory, Al Khobar</span></p>
     </div>
     <nav class="ft-nav" aria-label="Footer">
@@ -247,8 +247,11 @@
     <div class="ft-biz">
       <p class="ft-h" data-i18n="foot.business">Contact Us</p>
       <a class="btn btn-cream" href="contact.html?path=trade#help" data-path="trade"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="ft-link ft-tel" href="tel:+966557287799" dir="ltr">+966 55 728 7799</a>
-      <a class="ft-link ft-tel" href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a>
+      <dl class="ft-contact">
+        <div><dt data-nav="foot.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
+        <div><dt data-nav="foot.email">Email</dt><dd><a href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a></dd></div>
+        <div><dt data-nav="foot.address">Address</dt><dd data-nav="foot.addr">Al Mousa Complex, Building C, King Faisal Road, Al Khobar, Eastern Province, P.O. Box 2269, Saudi Arabia</dd></div>
+      </dl>
       <a class="ft-link" href="company.html#partners"><span data-i18n="hero.cta2">Partnerships</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
@@ -265,9 +268,9 @@
   </div>
 </footer>
 
-<script src="nav.js?v=1"></script>
+<script src="nav.js?v=3"></script>
 <script src="assets/vendor/lenis.min.js"></script>
-<script src="whitelabel.js?v=9"></script>
+<script src="whitelabel.js?v=11"></script>
 <script src="select.js?v=1"></script>
 </body>
 </html>

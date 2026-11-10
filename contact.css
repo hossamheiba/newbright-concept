@@ -227,3 +227,13 @@
 /* Arabic: the head-office block follows the same one-column rule as English on small screens */
 @media (max-width:1000px){[lang=ar] .ct-visit-in{grid-template-columns:1fr}}
 [lang=ar] .ct-label-co{line-height:1.4}
+
+/* the quote form inside the business path */
+.cq{margin-block-start:1.8rem;padding-block-start:1.8rem;border-block-start:2px dashed color-mix(in srgb,var(--burg) 25%,transparent)}
+.cq-t{font-size:clamp(1.4rem,2vw,1.9rem);font-weight:900;letter-spacing:-.02em;margin-block-end:.5rem}
+.cq-g{display:flex;align-items:center;gap:.7rem;margin-block:1.1rem .7rem;font-size:1.02rem;font-weight:800}
+.cq-g::before{content:"";width:1.6rem;height:3px;background:var(--gold)}
+.cq-next{margin-block-start:1.6rem;padding:1.2rem 1.4rem;border-radius:1.2rem;background:color-mix(in srgb,var(--burg) 7%,transparent)}
+.cq-next h5{font-size:1rem;font-weight:800;margin-block-end:.6rem}
+.cq-next ol{display:grid;gap:.4rem;padding-inline-start:1.3rem;font-size:.98rem;line-height:1.5}
+.cq .cf-f select,.cq .cf-f .cs{width:100%}

@@ -11,7 +11,7 @@
 <link rel="preload" href="assets/fonts/cairo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/packs/plain.webp" as="image">
 <script>document.documentElement.classList.add('js');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nb-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=19">
+<link rel="stylesheet" href="styles.css?v=29">
 </head>
 <body data-hdr="light">
 
@@ -25,7 +25,7 @@
   <p class="hdr-index" aria-hidden="true"><b id="hdrNum">01</b><span id="hdrLabel" data-i18n="ch.hero">The flavors</span></p>
   <div class="hdr-actions">
     <button class="pill pill-ghost" id="langBtn" type="button" aria-label="Switch language"><span id="langTxt">العربية</span></button>
-    <a class="pill pill-solid hide-s" href="#close" data-i18n="cta.quote">Request a quote</a>
+    <a class="pill pill-solid hide-s" href="contact.html?path=trade#help" data-path="trade" data-i18n="cta.quote">Request a quote</a>
     <button class="pill pill-menu" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">
       <span data-i18n="menu">Menu</span>
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h11M4 17h16"/></svg>
@@ -54,13 +54,12 @@
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
     </button>
     <ol class="menu-list">
-      <li><a href="#top"><i>01</i><span data-i18n="ch.hero">The flavors</span></a></li>
-      <li><a href="#intro"><i>02</i><span data-i18n="ch.intro">The company</span></a></li>
-      <li><a href="#idea"><i>03</i><span data-i18n="ch.idea">The idea</span></a></li>
-      <li><a href="#made"><i>04</i><span data-i18n="ch.made">Made in Saudi</span></a></li>
-      <li><a href="#label"><i>05</i><span data-i18n="ch.label">White label</span></a></li>
-      <li><a href="#partners"><i>06</i><span data-i18n="ch.partners">Partners</span></a></li>
-      <li><a href="#close"><i>07</i><span data-i18n="cta.quote">Request a quote</span></a></li>
+      <li><a href="index.html" aria-current="page"><i>01</i><span data-nav="menu.home">Home</span></a></li>
+      <li><a href="flavors.html"><i>02</i><span data-nav="menu.flavors">Flavors</span></a></li>
+      <li><a href="company.html"><i>03</i><span data-nav="menu.company">The company</span></a></li>
+      <li><a href="whitelabel.html"><i>04</i><span data-nav="menu.label">White label</span></a></li>
+      <li><a href="contact.html"><i>05</i><span data-nav="menu.contact">Contact</span></a></li>
+      <li><a href="contact.html?path=trade#help" data-path="trade"><i>06</i><span data-nav="menu.quote">Request a quote</span></a></li>
     </ol>
     <div class="menu-foot">
       <p data-i18n="menu.tag">Chinese Noodles · Pancit Canton</p>
@@ -111,7 +110,7 @@
     </h1>
     <p class="lead" data-i18n="hero.lead">Flavor is built directly into the noodles themselves.</p>
     <div class="cta-row">
-      <a class="btn btn-fill" href="#collection"><span data-i18n="hero.cta1">Flavor range</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-fill" href="flavors.html"><span data-i18n="hero.cta1">Flavor range</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-line" href="#partners"><span data-i18n="hero.cta2">Partnerships</span></a>
     </div>
   </div>
@@ -176,6 +175,7 @@
     <li data-reveal style="--i:4"><b>200<small>g</small></b><span data-i18n="fact.5.l">Net pack</span></li>
     <li data-reveal style="--i:5"><b data-i18n="fact.6.v">GMO-free</b><span data-i18n="fact.6.l">As stated on the pack</span></li>
   </ul>
+  <div class="more-row" data-reveal><a class="btn btn-fill" href="company.html"><span data-i18n="house.cta">More about the company</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 
   <div class="vm">
     <div class="vm-grid">
@@ -229,6 +229,7 @@
       <img class="pic" src="assets/packs/beef.webp" width="1820" height="1809" alt="" loading="lazy">
     </article>
   </div>
+  <div class="more-row" data-reveal><a class="btn btn-fill" href="flavors.html"><span data-i18n="coll.all">Explore every flavor</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </section>
 
 <!-- ═════════ 04 · THE IDEA — one strand, four flavors ═════════ -->
@@ -285,6 +286,7 @@
         <li data-reveal style="--i:0"><b>03</b><div><h3 data-i18n="made.3.t"></h3><p data-i18n="made.3.p"></p></div></li>
         <li data-reveal style="--i:0"><b>04</b><div><h3 data-i18n="made.4.t"></h3><p data-i18n="made.4.p"></p></div></li>
       </ol>
+      <div class="more-row" data-reveal><a class="btn btn-cream" href="company.html#make"><span data-i18n="made.cta">Manufacturing &amp; quality</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div>
     <figure class="map" data-reveal="map">
       <img src="assets/food/saudi-map.webp" width="1217" height="1113" alt="" loading="lazy">
@@ -308,7 +310,7 @@
       <div class="label-ctl" data-reveal style="--i:4">
         <div class="seg" role="radiogroup" data-i18n-aria="label.seg" aria-label="Brand">
           <button type="button" role="radio" aria-checked="true" data-brand="nb" data-i18n="label.nb">New Bright</button>
-          <button type="button" role="radio" aria-checked="false" data-brand="sufra" data-i18n="label.yours">Your brand</button>
+          <button type="button" role="radio" aria-checked="false" data-brand="zest" data-i18n="label.yours">Your brand</button>
         </div>
         <div class="dots" role="radiogroup" data-i18n-aria="hero.pick" aria-label="Flavor" id="cartonFlavors">
           <button type="button" role="radio" aria-checked="true" data-f="plain" style="--c:var(--yellow)"><span class="sr" data-i18n="f.plain.name">Plain</span></button>
@@ -317,7 +319,7 @@
           <button type="button" role="radio" aria-checked="false" data-f="beef" style="--c:var(--spice)"><span class="sr" data-i18n="f.beef.name">Beef</span></button>
         </div>
       </div>
-      <a class="btn btn-fill dark" href="#close" data-reveal style="--i:5"><span data-i18n="label.cta">Start a white-label enquiry</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-fill dark" href="whitelabel.html#enquiry" data-reveal style="--i:5"><span data-i18n="label.cta">Start a white-label enquiry</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 
     <div class="stage3d" id="stage3d">
@@ -367,7 +369,7 @@
           <h3 data-i18n="part.1.t">Distributors</h3>
           <p class="pp-p" data-i18n="part.1.p"></p>
           <ul class="pp-list"><li data-i18n="part.1.c1"></li><li data-i18n="part.1.c2"></li><li data-i18n="part.1.c3"></li></ul>
-          <a class="btn btn-fill" href="#close"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-fill" href="contact.html?path=trade#help" data-path="trade"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="vis-wrap" aria-hidden="true">
           <div class="vis pallet"><img class="pk" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:0%;--y:9%;--d:0ms"><img class="pk" src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:32%;--y:9%;--d:70ms"><img class="pk" src="assets/packs/chicken.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:64%;--y:9%;--d:140ms"><img class="pk" src="assets/packs/beef.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:16%;--y:31%;--d:210ms"><img class="pk" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:48%;--y:31%;--d:280ms"><img class="pk" src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:32%;--y:53%;--d:350ms"><span class="slab"><i></i><i></i><i></i></span></div>
@@ -381,7 +383,7 @@
           <h3 data-i18n="part.2.t">Retailers</h3>
           <p class="pp-p" data-i18n="part.2.p"></p>
           <ul class="pp-list"><li data-i18n="part.2.c1"></li><li data-i18n="part.2.c2"></li><li data-i18n="part.2.c3"></li></ul>
-          <a class="btn btn-fill" href="#close"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-fill" href="contact.html?path=trade#help" data-path="trade"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="vis-wrap" aria-hidden="true">
           <div class="vis shelf"><img class="pk" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:0%;--y:10%;--d:0ms"><img class="pk" src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:24%;--y:10%;--d:60ms"><img class="pk" src="assets/packs/chicken.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:48%;--y:10%;--d:120ms"><img class="pk" src="assets/packs/beef.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:72%;--y:10%;--d:180ms"><img class="pk" src="assets/packs/beef.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:0%;--y:56%;--d:240ms"><img class="pk" src="assets/packs/chicken.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:24%;--y:56%;--d:300ms"><img class="pk" src="assets/packs/vegetables.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:48%;--y:56%;--d:360ms"><img class="pk" src="assets/packs/plain.webp" alt="" width="1820" height="1809" loading="lazy" style="--x:72%;--y:56%;--d:420ms"><span class="board b1"></span><span class="board b2"></span></div>
@@ -395,7 +397,7 @@
           <h3 data-i18n="part.3.t">Foodservice</h3>
           <p class="pp-p" data-i18n="part.3.p"></p>
           <ul class="pp-list"><li data-i18n="part.3.c1"></li><li data-i18n="part.3.c2"></li><li data-i18n="part.3.c3"></li></ul>
-          <a class="btn btn-fill" href="#close"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-fill" href="contact.html?path=trade#help" data-path="trade"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="vis-wrap" aria-hidden="true">
           <div class="vis dishes"><span class="plate-bg"></span><img class="d1" src="assets/food/dish-beef.webp" alt="" loading="lazy"><img class="d2" src="assets/food/dish-vegetables.webp" alt="" loading="lazy"></div>
@@ -420,7 +422,7 @@
     <p class="close-sub" data-reveal style="--i:2" data-i18n="close.sub">Four Flavors. One Distinctive Noodle Experience</p>
     <div class="cta-row" data-reveal style="--i:3">
       <a class="btn btn-cream" href="mailto:newbright@alrammah.com.sa?subject=New%20Bright%20-%20Request%20a%20quote"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-line light" href="#top" data-i18n="close.cta2">Flavor range</a>
+      <a class="btn btn-line light" href="flavors.html" data-i18n="close.cta2">Flavor range</a>
     </div>
     <dl class="close-contact" data-reveal style="--i:4">
       <div><dt data-i18n="c.phone">Phone</dt><dd><a href="tel:+966557287799" dir="ltr">+966 55 728 7799</a></dd></div>
@@ -448,37 +450,36 @@
     <nav class="ft-nav" aria-label="Footer">
       <p class="ft-h" data-i18n="foot.explore">Explore</p>
       <ul>
-        <li><a href="#top" data-i18n="ch.hero">The flavors</a></li>
-        <li><a href="#intro" data-i18n="ch.intro">The company</a></li>
-        <li><a href="#idea" data-i18n="ch.idea">The idea</a></li>
-        <li><a href="#made" data-i18n="ch.made">Made in Saudi</a></li>
-        <li><a href="#label" data-i18n="ch.label">White label</a></li>
-        <li><a href="#partners" data-i18n="ch.partners">Partners</a></li>
+        <li><a href="index.html" data-nav="menu.home" aria-current="page">Home</a></li>
+        <li><a href="flavors.html" data-nav="menu.flavors">Flavors</a></li>
+        <li><a href="company.html" data-nav="menu.company">The company</a></li>
+        <li><a href="whitelabel.html" data-nav="menu.label">White label</a></li>
+        <li><a href="contact.html" data-nav="menu.contact">Contact</a></li>
       </ul>
     </nav>
     <div class="ft-biz">
       <p class="ft-h" data-i18n="foot.business">Contact Us</p>
-      <a class="btn btn-cream" href="#close"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-cream" href="contact.html?path=trade#help" data-path="trade"><span data-i18n="cta.quote">Request a quote</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="ft-link ft-tel" href="tel:+966557287799" dir="ltr">+966 55 728 7799</a>
       <a class="ft-link ft-tel" href="mailto:newbright@alrammah.com.sa" dir="ltr">newbright@alrammah.com.sa</a>
-      <a class="ft-link" href="#partners"><span data-i18n="hero.cta2">Partnerships</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="ft-link" href="company.html#partners"><span data-i18n="hero.cta2">Partnerships</span><svg viewBox="0 0 24 24" class="ico flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 
   <div class="ft-tape" role="group" data-i18n-aria="foot.flavors" aria-label="The four flavors">
-    <a class="ft-flavor" href="#top" data-f="plain" style="--c:var(--yellow);--on:var(--burg)"><span data-i18n="f.plain.name">Plain</span><b>01</b></a>
-    <a class="ft-flavor" href="#top" data-f="vegetables" style="--c:var(--green);--on:var(--cream)"><span data-i18n="f.vegetables.name">Vegetables</span><b>02</b></a>
-    <a class="ft-flavor" href="#top" data-f="chicken" style="--c:var(--orange);--on:var(--burg)"><span data-i18n="f.chicken.name">Chicken</span><b>03</b></a>
-    <a class="ft-flavor" href="#top" data-f="beef" style="--c:var(--spice);--on:var(--cream)"><span data-i18n="f.beef.name">Beef</span><b>04</b></a>
+    <a class="ft-flavor" href="flavors.html#plain" data-f="plain" style="--c:var(--yellow);--on:var(--burg)"><span data-i18n="f.plain.name">Plain</span><b>01</b></a>
+    <a class="ft-flavor" href="flavors.html#vegetables" data-f="vegetables" style="--c:var(--green);--on:var(--cream)"><span data-i18n="f.vegetables.name">Vegetables</span><b>02</b></a>
+    <a class="ft-flavor" href="flavors.html#chicken" data-f="chicken" style="--c:var(--orange);--on:var(--burg)"><span data-i18n="f.chicken.name">Chicken</span><b>03</b></a>
+    <a class="ft-flavor" href="flavors.html#beef" data-f="beef" style="--c:var(--spice);--on:var(--cream)"><span data-i18n="f.beef.name">Beef</span><b>04</b></a>
   </div>
 
   <div class="ft-bottom">
-    <p class="ft-fine" data-i18n="foot.fine">Design concept. Content from the New Bright Company Profile and Brand Guideline (2026).</p>
     <a class="ft-up" href="#top"><span data-i18n="foot.top">Back to top</span><i><svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i></a>
   </div>
 </footer>
 
+<script src="nav.js?v=1"></script>
 <script src="assets/vendor/lenis.min.js"></script>
-<script src="app.js?v=19"></script>
+<script src="app.js?v=21"></script>
 </body>
 </html>

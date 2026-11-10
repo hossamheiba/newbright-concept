@@ -31,7 +31,7 @@ const T = {
     'f.vegetables.desc': 'A fresh and vibrant flavor inspired by the goodness of vegetables.',
     'f.chicken.desc': 'A warm and familiar flavor crafted for everyday enjoyment.',
     'f.beef.desc': 'A richer and bolder flavor created for a deeper, more satisfying taste experience.',
-    'coll.eyebrow': 'Flavor range', 'coll.title': 'Four Flavors. One Distinctive Noodle Experience.',
+    'house.cta': 'More about the company', 'coll.all': 'Explore every flavor', 'made.cta': 'Manufacturing & quality', 'coll.eyebrow': 'Flavor range', 'coll.title': 'Four Flavors. One Distinctive Noodle Experience.',
     'coll.sub': 'The range moves from mild and versatile to rich and savory, giving consumers clear choices without changing the brand’s signature built-in flavor concept.', 'coll.view': 'View on stage',
     'house.eyebrow': 'Company overview', 'house.title': 'About New Bright',
     'house.sub': 'Al Rammah International Holding is a Saudi-owned group established in 1979 and headquartered in Al Khobar, Eastern Province.',
@@ -60,7 +60,7 @@ const T = {
     'label.eyebrow': 'White label · concept', 'label.title': 'Easy to Customize',
     'label.p': 'One noodle range. Many ways to make it your own.',
     'label.s1': 'Four Flavor Varieties', 'label.s2': 'Flexible commercial support', 'label.s3': 'Contact Us',
-    'label.seg': 'Brand', 'label.nb': 'New Bright', 'label.yours': 'Your brand', 'label.cta': 'Contact Us',
+    'label.seg': 'Brand', 'label.nb': 'New Bright', 'label.yours': 'Your brand', 'label.cta': 'Start your white label',
     'label.note': 'Concept illustration. The second brand is invented. Drag to turn.',
     'part.eyebrow': 'Partnerships', 'part.title': 'Partnership Focus', 'part.intro': 'Collaboration with distributors, retailers and foodservice businesses that help extend market reach and maintain reliable product availability.', 'part.hint': 'Keep scrolling', 'part.pager': 'Partnership types',
     'part.1.k': 'Partnership focus', 'part.2.k': 'Partnership focus', 'part.3.k': 'Partnership focus',
@@ -91,7 +91,7 @@ const T = {
     'f.vegetables.desc': 'نكهة منعشة ونابضة بالحياة مستوحاة من خير الخضار.',
     'f.chicken.desc': 'نكهة دافئة ومألوفة صُنعت للاستمتاع اليومي.',
     'f.beef.desc': 'نكهة أغنى وأجرأ لتجربة طعم أعمق وأكثر إشباعًا.',
-    'coll.eyebrow': 'تشكيلة النكهات', 'coll.title': 'أربع نكهات. تجربة نودلز واحدة مميزة.',
+    'house.cta': 'المزيد عن الشركة', 'coll.all': 'استكشف كل النكهات', 'made.cta': 'التصنيع والجودة', 'coll.eyebrow': 'تشكيلة النكهات', 'coll.title': 'أربع نكهات. تجربة نودلز واحدة مميزة.',
     'coll.sub': 'تتدرّج التشكيلة من الخفيف متعدد الاستخدامات إلى الغني الشهي، فتمنح المستهلك خيارات واضحة دون أن تتغيّر فكرة العلامة: النكهة داخل النودلز.', 'coll.view': 'شاهدها على المسرح',
     'house.eyebrow': 'نبذة عن الشركة', 'house.title': 'عن نيو برايت',
     'house.sub': 'مجموعة الرماح الدولية القابضة مجموعة سعودية الملكية تأسست عام 1979 ومقرها الخبر في المنطقة الشرقية.',
@@ -120,7 +120,7 @@ const T = {
     'label.eyebrow': 'علامتك الخاصة · فكرة', 'label.title': 'سهل التخصيص',
     'label.p': 'تشكيلة نودلز واحدة. طرق كثيرة لتجعلها خاصة بك.',
     'label.s1': 'أربع نكهات', 'label.s2': 'دعم تجاري مرن', 'label.s3': 'تواصل معنا',
-    'label.seg': 'العلامة', 'label.nb': 'نيو برايت', 'label.yours': 'علامتك', 'label.cta': 'تواصل معنا',
+    'label.seg': 'العلامة', 'label.nb': 'نيو برايت', 'label.yours': 'علامتك', 'label.cta': 'ابدأ علامتك الخاصة',
     'label.note': 'رسم توضيحي. العلامة الأخرى مُختلَقة. اسحب لتدويرها.',
     'part.eyebrow': 'الشراكات', 'part.title': 'محور الشراكات', 'part.intro': 'تعاون مع الموزّعين وتجار التجزئة وقطاع خدمات الطعام يوسّع الوصول إلى السوق ويحافظ على توفّر المنتج بثبات.', 'part.hint': 'واصل التمرير', 'part.pager': 'أنواع الشراكات',
     'part.1.k': 'محور الشراكات', 'part.2.k': 'محور الشراكات', 'part.3.k': 'محور الشراكات',
@@ -269,10 +269,11 @@ const cartonEl = $('#carton'), user = $('#cartonUser'), spinEl = $('#cartonSpin'
 const faces = { front: $('.f-front'), left: $('.f-left'), right: $('.f-right'), back: $('.f-back'), top: $('.f-top'), bottom: $('.f-bottom') };
 const SPINE = { plain: '#fcc75e', vegetables: '#1c7a4a', chicken: '#e27052', beef: '#7e1418' };
 let brand = 'nb', cf = 'plain', spin = 0, userRy = 0, baseRy = -28, dragging = false;
-['plain', 'vegetables', 'chicken', 'beef'].forEach((f) => ['nb', 'sufra'].forEach((b) => ['front', 'spine'].forEach((s) => { new Image().src = `assets/pack3d/${b}-${f}-${s}.webp`; })));
+const frontSrc = (b, f) => `assets/pack3d/${b}-${f}-front${b === 'zest' ? '-' + lang : ''}.webp`;
+['plain', 'vegetables', 'chicken', 'beef'].forEach((f) => ['nb', 'zest'].forEach((b) => { new Image().src = frontSrc(b, f); new Image().src = `assets/pack3d/${b}-${f}-spine.webp`; }));
 
 function skin() {
-  $('#imgFront').src = `assets/pack3d/${brand}-${cf}-front.webp`;
+  $('#imgFront').src = frontSrc(brand, cf);
   $('#imgSpine').src = `assets/pack3d/${brand}-${cf}-spine.webp`;
   cartonEl.dataset.brand = brand;
   cartonEl.style.setProperty('--spine', SPINE[cf]);
@@ -514,7 +515,7 @@ sdToggle.addEventListener('click', () => sdSet(!sdock.hasAttribute('data-open'))
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && sdock.hasAttribute('data-open')) { sdSet(false); sdToggle.focus(); } });
 document.addEventListener('pointerdown', (e) => { if (sdock.hasAttribute('data-open') && !sdock.contains(e.target)) sdSet(false); });
 
-$('#langBtn').addEventListener('click', () => applyLang(lang === 'ar' ? 'en' : 'ar'));
+$('#langBtn').addEventListener('click', () => { applyLang(lang === 'ar' ? 'en' : 'ar'); skin(); });
 
 /* ───────────── Smooth scrolling (Lenis, as on the main site: lerp 0.085) ───────────── */
 let lenis = null;
@@ -541,6 +542,7 @@ $$('a[href^="#"]').forEach((a) => a.addEventListener('click', (e) => {
 
 /* ───────────── Go ───────────── */
 applyLang(lang);
+skin();
 updateHeaderTheme(true);
 frame();
 })();
